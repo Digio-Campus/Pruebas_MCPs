@@ -1,0 +1,19 @@
+{
+  "servers": {
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["chrome-devtools-mcp"]
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "env": {
+	"MEMORY_PERSIST": "true",
+	"MEMORY_FILE_PATH": "~/memory.json"
+	}
+    }
+  }
+}
