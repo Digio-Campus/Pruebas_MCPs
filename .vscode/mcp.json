@@ -12,7 +12,7 @@
       ],
       "env": {
 	"MEMORY_PERSIST": "true",
-	"MEMORY_FILE_PATH": "~/memory.json"
+	"MEMORY_FILE_PATH": "/home/chaimaa/memory.json"
 	}
     }
   }

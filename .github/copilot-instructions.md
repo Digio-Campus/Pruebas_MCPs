@@ -61,12 +61,6 @@ Tests are manually executed through GitHub Copilot prompts. Each test is documen
 - Full transcript of AI agent interactions
 - Extracted data results
 
-### Memory Keys Convention
-Use semantic naming for memory entries:
-- **CH-XXXXX** format appears to be the naming convention
-- Store both the raw data and human-readable summaries
-- Include extraction method and timestamp in observations
-
 ### Common Test Targets
 - University of Murcia (um.es): Faculty lists, news, institutional structure
 - YouTube videos: Content summarization from transcripts and metadata

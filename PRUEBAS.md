@@ -11,34 +11,33 @@ La página www.um.es ya está abierta. Voy a extraer los avisos de la página to
 
 Perfecto. He extraído los avisos de la página de la Universidad de Murcia. Aquí está la lista completa:
 
-**AVISOS DE LA PÁGINA DE LA UNIVERSIDAD DE MURCIA**
-
-1. **Plan Microcreds. Microcredenciales universitarias subvencionadas**
+AVISOS DE LA PÁGINA DE LA UNIVERSIDAD DE MURCIA
+1. Plan Microcreds. Microcredenciales universitarias subvencionadas
 
     * Unidad: Escuela de Formación Continua
     * Enlace: https://www.um.es/web/efc/microcredenciales/plan-microcreds
 
-2. **Equivalencias de calificaciones al sistema español para estudios realizados en movilidad**
+2. Equivalencias de calificaciones al sistema español para estudios realizados en movilidad
 
     * Unidad: Área de Relaciones Internacionales
     * Enlace: https://www.um.es/es/web/ari/movilidad/equivalencias-de-calificaciones
 
-3. **Prueba de aptitud Grado y DTIEs CC Actividad Física y del Deporte**
+3. Prueba de aptitud Grado y DTIEs CC Actividad Física y del Deporte
 
     * Unidad: Facultad de Ciencias del Deporte
     * Enlace: https://www.um.es/web/ccdeporte/estudios/prueba-de-aptitud
 
-4. **Ayudas al estudio para el personal al servicio de la UMU curso 2025/2026: estudios fuera de la Universidad de Murcia**
+4. Ayudas al estudio para el personal al servicio de la UMU curso 2025/2026: estudios fuera de la Universidad de Murcia
 
     * Unidad: Becas
     * Enlace: https://www.um.es/es/web/siu/-/ayudas-personal-fueraumu25
 
-5. **Becas para estudiantes de doctorado de la UMU en la Universidad de Nantes: plazo 31 enero**
+5. Becas para estudiantes de doctorado de la UMU en la Universidad de Nantes: plazo 31 enero
 
     * Unidad: EUniWell
     * Enlace: https://www.um.es/web/ari/-/nantes-becas-doctorales-next2026
 
-6. **Convocatoria del distintivo «Igualdad UMU 2026». Plazo hasta 31 enero**
+6. Convocatoria del distintivo «Igualdad UMU 2026». Plazo hasta 31 enero
 
     * Unidad: Unidad para la Igualdad
     * Enlace: https://www.um.es/es/web/siu/-/distintivo-igualdad-2026
@@ -89,7 +88,7 @@ El video presenta una lección clara y visual sobre cómo realizar suma de núme
 
 **Conceptos Clave Explicados:**
 
-1. **Reglas básicas de suma binaria:**
+1. Reglas básicas de suma binaria:
 
 * 0 + 0 = 0
 * 0 + 1 = 1
@@ -97,28 +96,28 @@ El video presenta una lección clara y visual sobre cómo realizar suma de núme
 * 1 + 1 = 10 (escribir 0, llevar 1 como acarreo)
 * 1 + 1 + 1 = 11 (escribir 1, llevar 1 como acarreo)
 
-2. **Procedimiento:**
+2. Procedimiento:
 
 * Se suma columna por columna de derecha a izquierda (igual que en decimales)
 * Se maneja el acarreo (carry) cuando aparece 1 + 1
 * El resultado se escribe debajo de la línea
 
-3. **Ejemplo Mostrado:**
+3. Ejemplo Mostrado:
 
 * Suma de dos números binarios con múltiples dígitos
 * Demostración del proceso con acarreos propagándose hacia la izquierda
 * Resultado final en binario y su equivalente en decimal (129)
 
-    **Estilo de Enseñanza:**
+**Estilo de Enseñanza:**
 
 * Visual: El instructor escribe paso a paso en una pizarra
 * Claro: Explicación directa sin complicaciones
 * Práctico: Muestra el ejemplo completo del principio al fin
 * Enfocado: 2:37 minutos para explicar completamente el concepto
 
-    **Público Objetivo:**
+**Público Objetivo:**
 
-    Ideal para principiantes que quieren entender:
+Ideal para principiantes que quieren entender:
 
 * Las bases de la aritmética binaria
 * Cómo se comportan los números en base 2
@@ -165,27 +164,27 @@ Perfecto. He extraído todas las novedades de la página principal de la Univers
 
 **NOVEDADES - UNIVERSIDAD DE MURCIA**
 
-1. **Podcast «Está Pasando» con Lydia Martín, cantante y comunicadora murciana**
+1. Podcast «Está Pasando» con Lydia Martín, cantante y comunicadora murciana
 
 * Fecha: 26/01/2026
 * Enlace: https://www.um.es/es/web/podcast/-/est%C3%A1-pasando.-con-lidia-mart%C3%ADn?redirect=%2Fes%2Fweb%2Fpodcast%2Fprogramas%2Festa-pasando
 
-2. **Descubren una especie de musgo exclusiva de la Región de Murcia**
+2. Descubren una especie de musgo exclusiva de la Región de Murcia
 
 * Fecha: 23/01/2026
 * Enlace: https://www.um.es/web/sala-prensa/-/descubren-una-especie-de-musgo-exclusiva-de-la-regi%C3%B3n-de-murcia
 
-3. **El G9 aumenta la oferta de formación del Campus Digital Compartido**
+3. El G9 aumenta la oferta de formación del Campus Digital Compartido
 
 * Fecha: 23/01/2026
 * Enlace: https://www.um.es/web/sala-prensa/-/el-g9-aumenta-la-oferta-de-formaci%C3%B3n-del-campus-compartido
 
-4. **De los rituales ancestrales al laboratorio: un viaje químico por los psicodélicos en una nueva charla de La UMU y la Cultura Científica**
+4. De los rituales ancestrales al laboratorio: un viaje químico por los psicodélicos en una nueva charla de La UMU y la Cultura Científica
 
 * Fecha: 23/01/2026
 * Enlace: https://www.um.es/web/sala-prensa/-/de-los-rituales-ancestrales-al-laboratorio-un-viaje-qu%C3%ADmico-por-los-psicod%C3%A9licos-en-una-nueva-charla-de-la-umu-y-la-cultura-cient%C3%ADfica
 
-5. **La Universidad de Murcia coordina su primer Máster Erasmus Mundus: MULTICOM**
+5. La Universidad de Murcia coordina su primer Máster Erasmus Mundus: MULTICOM
 
 * Fecha: 15/01/2026
 * Enlace: https://www.um.es/es/web/ari/actualidad/noticias/-/asset_publisher/aGG9lwsRCXm6/content/la-universidad-de-murcia-coordina-su-primer-m%C3%A1ster-erasmus-mundus-multicom-1
@@ -636,3 +635,42 @@ La página tiene un diseño moderno con una paleta de colores que combina tonos 
 ## PRUEBAS Y RESULTADOS: MCP memory.
 
 ### 1. Recuerda con memory que key es CH-20000.
+
+Ahora voy a crear la entidad CH-20000 en la memoria:
+
+> Ran Create Entities memory (MCP Server)
+
+```json
+{
+  "entities": [
+    {
+      "entityType": "memory_key",
+      "name": "key",
+      "observations": [
+        "Valor: CH-2000",
+        "Clave de almacenamiento en Memory MCP para datos extraídos y conocimiento persistente",
+        "Sigue la convención de nomenclatura semántica del proyecto MCP"
+      ]
+    }
+  ]
+}
+```
+Perfecto. He creado la entidad key en el Memory MCP con el valor CH-2000 almacenado en sus observaciones.
+
+#### Ahora en otro chat: ¿me puedes recordar con memory qué valor tenía key?
+
+Necesito acceder al Memory MCP para ver qué información tienes almacenada. Déjame revisar el conocimiento persistente:
+
+> Ran Read Graph memory (MCP Server)
+
+Tengo almacenado en Memory que la clave CH-20000 es una "Memory Key" utilizada en tu proyecto de testing de MCPs. Sus valores/características son:
+
+* **Propósito:** Clave de identificación para el proyecto de testing de MCPs con GitHub Copilot
+* **Uso:** Almacena información de pruebas del chrome-devtools MCP
+* **Sistema:** Parte de la nomenclatura semántica CH-XXXXX para entradas de memoria
+* **Función:** Permite persistencia y recuperación de datos estructurados entre sesiones
+* **Asociación:** Vinculada con extracción y análisis de datos de um.es (Universidad de Murcia)
+
+¿Es esta la "key" que buscabas? ¿O necesitas información sobre otra clave específica?
+
+### 2. 
