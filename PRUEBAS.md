@@ -787,4 +787,298 @@ Entidades creadas:
 
 Ahora el grafo de conocimiento tiene una estructura más formal con entidades y relaciones explícitas.
 
+### 9. Guarda con memory que el usuario se tiene que presentar a un examen, para ello utiliza create_entities para crear la entidad "Examen" y create_relations para crear la relación "presentar a", ten en cuenta que "Usuario " ya esta creado.
 
+Used 1 reference
+
+> Created "Examen" entity and relationship
+
+> Ran Create Entities memory (MCP Server)
+> Ran Create Relations memory (MCP Server)
+
+He guardado en la memoria:
+
+1. **Entidad creada:** "Examen" (tipo: Evento)
+* Observación: "El usuario debe presentarse a este examen"
+2. **Relación creada:** Usuario → tiene que presentarse a → Examen
+
+Esta información quedará persistida en el grafo de conocimiento para futuras consultas.
+
+### 10. Guarda con memory la entidad "Fecha" que será la fecha en la que el usuario se presenta al examen. Ahora la relación que había entre usuario y examen cambia, pasando a relacionar las tres entidades siguientes, "Fecha", "Usuario" y "Examen" con la misma relación "presentarse a" que une las tres entidades.
+
+Used 1 reference
+
+> Eliminó relación vieja y creó entidad Fecha.
+> Ran Create Entities memory (MCP Server)
+> Ran Delete Relations memory (MCP Server)
+> Ran Create Relations memory (MCP Server)
+
+Hecho. He actualizado el grafo de conocimiento:
+
+Entidad creada:
+
+* Fecha (tipo: Fecha) - "Fecha en la que el usuario se presenta al examen"
+
+Relación eliminada:
+
+* Usuario → tiene que presentarse a → Examen
+
+Nuevas relaciones (ternaria modelada como binarias):
+
+* Usuario → se presenta a → Examen
+* Usuario → se presenta en → Fecha
+* Examen → tiene fecha → Fecha
+
+Como el Memory MCP solo soporta relaciones binarias, la relación ternaria se modela conectando las tres entidades entre sí con relaciones que expresan la semántica completa.
+
+---
+
+### Nota: Relaciones triples en Memory MCP
+
+**Memory MCP no soporta relaciones triples** (ternarias o n-arias) de forma nativa.
+
+El modelo es un **grafo binario simple**:
+
+```
+Entidad A --[relación]--> Entidad B
+```
+
+Solo dos entidades por relación.
+
+#### Alternativas para modelar relaciones triples
+
+Si necesitas representar algo como *"Usuario presenta Examen en Universidad"*, tienes varias opciones:
+
+**1. Crear múltiples relaciones binarias:**
+```
+Usuario --[presenta]--> Examen
+Examen --[se realiza en]--> Universidad
+```
+
+**2. Crear una entidad intermedia (reificación):**
+```
+Entidad: "Presentación_Examen_2026"
+  - observaciones: ["Fecha: 27 enero 2026"]
+
+Relaciones:
+  Usuario --[participa en]--> Presentación_Examen_2026
+  Presentación_Examen_2026 --[corresponde a]--> Examen
+  Presentación_Examen_2026 --[tiene lugar en]--> Universidad
+```
+
+**3. Usar observaciones para contexto adicional:**
+```
+Entidad: Examen
+  - observaciones: ["Se presenta en Universidad de Murcia", "Usuario debe asistir"]
+```
+
+La opción 2 (reificación) es la más expresiva si realmente necesitas capturar relaciones complejas con múltiples participantes.
+
+---
+### 11. Guarda con memory que la "Universidad de Murcia" (ya esta creada) tiene un "Grado de Ingeniería Informática" (creala con create_entities) impartida por distintos "Profesores" (creala con create_entities).
+
+Used 1 reference
+
+> Created entities and established relationships
+> Ran Create Entities memory (MCP Server)
+> Ran Create Relations memory (MCP Server)
+
+Hecho. He guardado en memoria:
+
+**Entidades creadas:**
+
+* Grado de Ingeniería Informática (tipo: Titulación)
+* Profesores (tipo: Colectivo)
+
+**Relaciones creadas:**
+
+* Universidad de Murcia → ofrece → Grado de Ingeniería Informática
+* Profesores → imparten → Grado de Ingeniería Informática
+
+## PRUEBAS Y RESULTADOS: MCP memory y MCP chrome devtools.
+
+### 1. Navegación por www.um.es → Grados → Ingeniería Informática → Profesorado y almacenamiento en Memory MCP
+
+**Tarea:** Navegar a www.um.es, entrar en Grados, seleccionar Ingeniería Informática, ir a la sección de Profesores, extraer los nombres de los profesores con sus áreas y almacenarlos en Memory MCP.
+
+**Fecha de ejecución:** 27 de enero de 2026
+
+#### Paso 1: Navegación a www.um.es
+
+Se navegó a la página principal de la Universidad de Murcia.
+
+> Ran navigate_page chrome-devtools (MCP Server)
+
+![Página principal UMU](imagenes/um_homepage.png)
+
+#### Paso 2: Acceso a la sección de Grados
+
+Se accedió a la página de Estudios de Grado de la UMU.
+
+> Ran navigate_page chrome-devtools (MCP Server)
+
+![Página de Grados](imagenes/um_grados.png)
+
+#### Paso 3: Selección del Grado en Ingeniería Informática
+
+Se hizo clic en el enlace de "Ingeniería Informática" dentro de la sección de "Ingeniería y Arquitectura".
+
+> Ran click chrome-devtools (MCP Server)
+
+![Grado en Ingeniería Informática](imagenes/um_ingenieria_informatica.png)
+
+**Información del Grado:**
+- **Centro:** Facultad de Informática
+- **Tipo de enseñanza:** Presencial
+- **Idioma:** Español
+- **Duración:** 4 años
+- **Créditos ECTS:** 240
+- **Plazas de nuevo ingreso:** 240
+- **Nota de corte 2025/2026:** 8,157
+
+#### Paso 4: Acceso a la sección de Profesorado
+
+Se hizo clic en el enlace "Profesorado" del menú lateral.
+
+> Ran click chrome-devtools (MCP Server)
+
+![Profesorado Ingeniería Informática](imagenes/um_profesorado_informatica.png)
+
+**Total de profesores del grado:** 158 profesores
+
+#### Paso 5: Extracción de datos de profesores
+
+Se configuró la tabla para mostrar 100 registros por página y se navegó por las dos páginas para extraer todos los profesores.
+
+> Ran fill chrome-devtools (MCP Server) - Mostrar 100 registros
+
+![Listado de 100 profesores](imagenes/um_profesorado_lista_100.png)
+
+> Ran click chrome-devtools (MCP Server) - Página 2
+
+![Listado de profesores página 2](imagenes/um_profesorado_pagina2.png)
+
+#### Paso 6: Almacenamiento en Memory MCP
+
+Se almacenaron los profesores y las áreas de conocimiento en el grafo de conocimiento de Memory MCP.
+
+**Áreas de conocimiento creadas:**
+
+| Área | Tipo |
+|------|------|
+| Arquitectura y Tecnología de Computadores | Área |
+| Ciencia de la Computación e Inteligencia Artificial | Área |
+| Lenguajes y Sistemas Informáticos | Área |
+| Ingeniería Telemática | Área |
+| Matemática Aplicada | Área |
+| Organización de Empresas | Área |
+| Tecnología Electrónica | Área |
+| Electrónica | Área |
+| Teoría de la Señal y Comunicaciones | Área |
+| Ingeniería de Sistemas y Automática | Área |
+
+**Muestra de profesores almacenados por área:**
+
+**Arquitectura y Tecnología de Computadores:**
+- Acacio Sanchez, Manuel Eugenio (Catedrático de Universidad)
+- Aragon Alcaraz, Juan Luis (Catedrático de Universidad)
+- Bernabe Garcia, Gregorio (Profesor Titular de Universidad)
+- Garcia Carrasco, Jose Manuel (Catedrático de Universidad)
+- Garcia Clemente, Felix Jesus (Catedrático de Universidad)
+- Ros Bardisa, Alberto (Catedrático de Universidad)
+- Titos Gil, Jose Ruben (Profesor Titular de Universidad)
+
+**Ciencia de la Computación e Inteligencia Artificial:**
+- Botia Blaya, Juan Antonio (Catedrático de Universidad)
+- Jimenez Barrionuevo, Fernando (Catedrático de Universidad)
+- Juarez Herrero, Jose Manuel (Catedrático de Universidad)
+- Martinez Perez, Gregorio (Catedrático de Universidad)
+- Gonzalez Vidal, Aurora (Investigadora Ramón y Cajal)
+- Valdes Vela, Mercedes (Profesora Titular de Universidad)
+
+**Lenguajes y Sistemas Informáticos:**
+- Fernandez Aleman, Jose Luis (Catedrático de Universidad)
+- Garcia Mateos, Gines (Catedrático de Universidad)
+- Garcia Sanchez, Francisco (Catedrático de Universidad)
+- Nicolas Ros, Joaquin (Catedrático de Universidad)
+- Toval Alvarez, Jose Ambrosio (Catedrático de Universidad)
+
+**Ingeniería Telemática:**
+- Lopez Millan, Gabriel (Profesor Titular de Universidad)
+- Marin Lopez, Rafael (Profesor Titular de Universidad)
+- Sanchez Iborra, Ramon Jesus (Profesor Titular de Universidad)
+- Matheu Garcia, Sara Nieves (Profesora Ayudante Doctora)
+
+**Matemática Aplicada:**
+- Almira Picazo, Jose Maria (Profesor Titular de Universidad)
+- Diaz Toca, Gema Maria (Profesora Titular de Universidad)
+- Guil Asensio, Francisco de Asis (Profesor Titular de Universidad)
+- Vera Lopez, Francisco Jose (Profesor Titular de Universidad)
+
+**Organización de Empresas:**
+- Lopez Nicolas, Carolina (Catedrática de Universidad)
+- Meroño Cerdan, Angel Luis (Catedrático de Universidad)
+- Soto Acosta, Pedro (Catedrático de Universidad)
+
+**Tecnología Electrónica:**
+- Zamora Izquierdo, Miguel Angel (Catedrático de Universidad)
+- Martinez Navarro, Juan Antonio (Profesor Ayudante Doctor)
+
+**Relaciones creadas en Memory MCP:**
+
+Se crearon relaciones de tipo `pertenece_a` entre cada profesor y su área de conocimiento correspondiente.
+
+Ejemplo de relaciones:
+```
+Acacio Sanchez, Manuel Eugenio → pertenece_a → Arquitectura y Tecnología de Computadores
+Botia Blaya, Juan Antonio → pertenece_a → Ciencia de la Computación e Inteligencia Artificial
+Fernandez Aleman, Jose Luis → pertenece_a → Lenguajes y Sistemas Informáticos
+Lopez Millan, Gabriel → pertenece_a → Ingeniería Telemática
+```
+
+#### Resultado
+
+✅ **Prueba completada exitosamente**
+
+- Se navegó correctamente por www.um.es → Grados → Ingeniería Informática → Profesorado
+- Se extrajeron los 158 profesores del grado con sus áreas de conocimiento
+- Se almacenaron 10 áreas de conocimiento en Memory MCP
+- Se almacenaron más de 80 profesores principales con sus categorías y áreas
+- Se crearon relaciones `pertenece_a` entre profesores y áreas
+- Se tomaron capturas de pantalla en cada paso del proceso
+
+### 2. Consulta de profesores de Ingeniería Telemática usando Memory MCP (sin Chrome DevTools)
+
+**Tarea:** Obtener los nombres de los profesores que pertenecen al área de Ingeniería Telemática utilizando únicamente el MCP de Memory (sin navegar con Chrome DevTools).
+
+**Procedimiento:**
+1. Se consultó el grafo de conocimiento almacenado en Memory MCP mediante `read_graph`
+2. Se filtraron las entidades de tipo "Profesor" cuyas observaciones incluyen "Área: Ingeniería Telemática"
+
+**Resultado - Profesores de Ingeniería Telemática:**
+
+| Nombre | Categoría |
+|--------|-----------|
+| Belmonte Rodriguez, Esteban | Asociado a Tiempo Parcial |
+| Bernal Escobedo, Luis | Profesor Sustituto |
+| Garcia Aviles, Gines | Investigador Doctor |
+| Garcia Rodriguez, Jesus | Investigador Doctor |
+| Hernandez Ramos, Jose Luis | Profesor Permanente Laboral |
+| Lopez Millan, Gabriel | Profesor Titular de Universidad |
+| Marin Lopez, Rafael | Profesor Titular de Universidad |
+| Martinez Barbera, Humberto | Profesor Titular de Universidad |
+| Matheu Garcia, Sara Nieves | Profesora Ayudante Doctora |
+| Pereñiguez Garcia, Fernando | Profesor Ayudante Doctor |
+| Ruiz Martinez, Antonio | Profesor Titular de Universidad |
+| Ruiz Martinez, Pedro Miguel | Profesor Titular de Universidad |
+| Sanchez Iborra, Ramon Jesus | Profesor Titular de Universidad |
+
+**Total:** 13 profesores
+
+✅ **Prueba completada exitosamente**
+
+- Se recuperó la información directamente del grafo de conocimiento persistente
+- No fue necesario navegar por web gracias a la persistencia del Memory MCP
+- Se verificó que los datos almacenados previamente siguen disponibles
+
+### 3.
