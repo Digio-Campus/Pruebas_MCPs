@@ -673,4 +673,118 @@ Tengo almacenado en Memory que la clave CH-20000 es una "Memory Key" utilizada e
 
 ¿Es esta la "key" que buscabas? ¿O necesitas información sobre otra clave específica?
 
-### 2. 
+### 2. Guarda la siguiente información con memory, el proyecto llamado Pruebas MCPs es un proyecto universitario para prácticas externas con una empresa.
+
+Ahora voy a crear la entidad del proyecto y guardar la información:
+
+> Ran Create Entities memory (MCP Server)
+
+✅ Guardado correctamente. He creado la entidad "Pruebas MCPs" en Memory con las siguientes observaciones:
+
+* **Tipo:** Proyecto universitario para prácticas externas
+* **Contexto:** Prácticas externas con una empresa
+* **Objetivo:** Probar e integrar Model Context Protocol (MCP) servers con GitHub Copilot
+* **Ubicación:** /home/chaimaa/Escritorio/UNIVERSIDAD/SEGUNDA RONDA/PRA_DOC/Proyecto-MCPs
+* **Servidores MCP activos:** chrome-devtools, memory
+* **Fecha de creación:** 27 de enero de 2026
+
+La información está ahora persistida y disponible para futuras sesiones.
+
+### 3. Borra la entidad que acabas de crear con memory.
+
+✅ Eliminada. La entidad "Pruebas MCPs" ha sido borrada de Memory.
+
+### 4. Guarda con memory que estudió en la universidad de murcia, ingeniería informática.
+
+
+Used 1 reference
+
+> Created entity to store user education information
+
+> Ran Create Entities memory (MCP Server)
+
+✅ Guardado. He creado la entidad con tu información académica:
+
+* **Universidad:** Universidad de Murcia
+* **Carrera:** Ingeniería Informática
+* **Tipo:** Grado universitario
+* **Fecha de registro:** 27 de enero de 2026
+
+Esta información está ahora persistida en Memory y disponible para futuras sesiones.
+
+### 5.Recuerda también que ahora mismo estoy estudiando para algunos examenes.
+
+Used 1 reference
+
+> Activated observation management tools and added observation
+
+> Ran Add Observations memory (MCP Server)
+
+✅ Guardado. He añadido a tu perfil:
+
+* **Actividad actual:** Estudiando para exámenes
+* **Fecha de actualización:** 27 de enero de 2026
+
+Esta información se ha registrado junto con tu información académica anterior en Memory.
+
+### 6. ¿Dónde estoy estudiando , qué estudio y qué estoy haciendo ahora mismo?
+
+Used 1 reference
+
+> Extracted information from Memory MCP
+
+> Ran Read Graph memory (MCP Server)
+
+Según el Memory MCP, tienes almacenado lo siguiente:
+
+**Formación Académica:**
+
+* **Universidad:** Universidad de Murcia
+* **Carrera:** Ingeniería Informática
+* **Tipo:** Grado universitario
+* **Actividad actual:** Estudiando para exámenes
+* **Fecha de registro:** 27 de enero de 2026
+
+### 7.Qué relación hay entre la UMU y mis estudios, utiliza memory para determinarlo?
+
+Used 1 reference
+
+> Reviewed memory graph for updated relationships.
+
+> Ran Read Graph memory (MCP Server)
+
+Según el Memory MCP, la relación entre la UMU y tus estudios es:
+
+Relación encontrada:
+
+* Estudias en la Universidad de Murcia (UMU)
+* **Carrera:** Ingeniería Informática (Grado universitario)
+
+**Nota:** Actualmente no hay relaciones explícitas (relations: []) definidas en el grafo de conocimiento, pero la información está contenida en las observaciones de la entidad "Usuario - Carrera Universitaria".
+
+¿Quieres que cree una relación formal entre las entidades para que quede más estructurado en el grafo? Por ejemplo:
+
+Usuario → estudia en → Universidad de Murcia
+Usuario → cursa → Ingeniería Informática
+
+### 8. Crea una relación formal entre las entidades para que el grafo quede más estructurado.
+
+Used 1 reference
+
+> Created entities and established relationships
+
+> Ran Create Entities memory (MCP Server)
+
+> Ran Create Relations memory (MCP Server)
+
+✅ Relaciones creadas en Memory MCP:
+
+Entidades creadas:
+
+* **Usuario (persona):** Estudiante universitario
+* **Universidad de Murcia (institución educativa):** Universidad pública española, UMU
+* **Ingeniería Informática (carrera universitaria):** Grado universitario
+
+Ahora el grafo de conocimiento tiene una estructura más formal con entidades y relaciones explícitas.
+
+
