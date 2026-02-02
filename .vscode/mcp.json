@@ -6,14 +6,11 @@
     },
     "memory": {
       "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-memory"
-      ],
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
       "env": {
-	"MEMORY_PERSIST": "true",
-	"MEMORY_FILE_PATH": "/home/chaimaa/memory.jsonl"
-	}
+        "MEMORY_PERSIST": "true",
+        "MEMORY_FILE_PATH": "${workspaceFolder}/data/memory.jsonl"
+      }
     }
   }
 }

@@ -3,89 +3,52 @@
 ## Project Overview
 This repository documents testing and integration of Model Context Protocol (MCP) servers with GitHub Copilot. Focus areas are browser automation (Chrome DevTools MCP) and knowledge persistence (Memory MCP).
 
-## Architecture & Key Components
+# Ticketmaster – contar eventos por ciudad y rango de fechas
 
-### MCP Server Configuration
-- **Location:** [.vscode/mcp.json](.vscode/mcp.json)
-- **Pattern:** Servers are configured as NPX-based tools with environment variables for persistence
-- **Active Servers:**
-  - `chrome-devtools`: Browser automation via `chrome-devtools-mcp`
-  - `memory`: Knowledge graph persistence via `@modelcontextprotocol/server-memory`
+## Herramientas
+- `chrome-devtools`
+- `memory`
 
-### Memory Persistence Setup
-- Environment variable: `MEMORY_PERSIST=true`
-- File location: `~/memory.json`
-- **Use case:** Store extracted data, navigation states, and structured knowledge across sessions
+---
 
-## Testing Methodology
+## Objetivo
+Contar cuántos eventos hay en `www.ticketmaster.es` para **una ciudad cualquiera** dentro de **un rango de fechas cualquiera**, para ello tienes que ver si hay información al respecto en memory MCP si no hay utilizar chrome-devtools.
 
-### Chrome DevTools MCP Tests
-See [PRUEBAS.md](PRUEBAS.md) for complete test documentation. Test pattern:
-1. **Open browser & navigate** to target website
-2. **Extract structured data** (text, links, JSON)
-3. **Parse & analyze** content (headings, network requests, console errors)
-4. **Return findings** to user with relevant metadata
+Variables de entrada:
+- `ciudad`
+- `fecha_inicio`
+- `fecha_fin`
 
-### Test Categories
-- **Web Scraping:** Extract links, headings, and news items from university websites
-- **Network Analysis:** Capture HTTP/2 requests, headers, SSL/TLS configuration
-- **Console Inspection:** Identify JS errors, warnings, and module loading issues
-- **Data Extraction:** Convert HTML/DOM content to structured formats (JSON, lists)
+---
 
-## Project-Specific Patterns
+## Procedimiento (chrome-devtools)
 
-### Data Extraction Pattern
-When extracting web content:
-- Always use the Memory MCP to store results with descriptive keys
-- Include source URLs and timestamps
-- Convert HTML/DOM to structured JSON when possible
-- Offer user options for file saving (e.g., `.txt`, `.json`)
+1. Abrir `https://www.ticketmaster.es`.
+2. Aceptar o cerrar el banner de cookies si aparece.
+3. En el buscador principal (texto “BUSCAR” / “Buscar”), escribir `{ciudad}` y lanzar la búsqueda.
+4. Esperar a que carguen los resultados.
+5. Abrir el filtro **FECHAS** (si no es visible, abrir primero “Filtros”).
+6. Establecer:
+   - Fecha inicio: `{fecha_inicio}`
+   - Fecha fin: `{fecha_fin}`
+7. Pulsar **Aplicar**.
+8. Esperar a que el listado se actualice.
+9. Contar los eventos:
+   - Usar un contador visible si existe.
+   - Si no, contar las tarjetas de eventos del listado.
 
-### Error Handling
-- Wrap optional module loads in try-catch blocks (see Liferay module pattern in test results)
-- Distinguish between critical errors (HTTP status) and expected warnings (missing optional modules)
-- Always report HTTP/2 status and SSL/TLS certificate validity
+---
 
-### Navigation Workflow
-1. **Fetch page** via browser automation
-2. **Wait for interactive elements** before querying
-3. **Extract DOM structure** as JSON when schema matters
-4. **Cache results** in Memory MCP with semantic keys (e.g., `CH-20000` for specific data)
+## Salida
+Devolver solo: `Número de eventos: X`
 
-## Critical Developer Information
+## Memoria (memory MCP)
 
-### Running Tests
-Tests are manually executed through GitHub Copilot prompts. Each test is documented with:
-- Task description and expected outcome
-- Screenshots of execution (stored in [imagenes/](imagenes/) directory)
-- Full transcript of AI agent interactions
-- Extracted data results
+Guardar este procedimiento como: ticketmaster_contar_eventos_por_ciudad_y_fechas
 
-### Common Test Targets
-- University of Murcia (um.es): Faculty lists, news, institutional structure
-- YouTube videos: Content summarization from transcripts and metadata
-- Network inspection: Protocol analysis, certificate validation
+Contenido mínimo a guardar:
+- Variables: ciudad, fecha_inicio, fecha_fin
+- Pasos: búsqueda, filtro por fechas, aplicar, esperar carga, conteo
+- Nota: gestionar cookies si aparecen
 
-## Integration Points
-
-### External Dependencies
-- **Chrome browser:** Required for DevTools MCP testing
-- **NPX packages:** Ensure `chrome-devtools-mcp` and `@modelcontextprotocol/server-memory` are available
-- **Liferay CMS:** Target website uses Liferay Community Edition (informs parsing strategy)
-
-### VS Code Configuration
-The MCP servers are registered in `.vscode/mcp.json`. When updating:
-- Maintain exact `command` and `args` structure
-- Preserve environment variable format for persistence
-- Test configuration by running a simple test prompt
-
-## Key Files Reference
-- [.vscode/mcp.json](.vscode/mcp.json) — Server configuration
-- [PRUEBAS.md](PRUEBAS.md) — Test documentation with results
-- [imagenes/](imagenes/) — Screenshots and visual evidence of tests
-
-## Notes for AI Agents
-- Always check if a Memory MCP entry exists before fetching new data
-- Offer to save extracted data in multiple formats for user convenience
-- Document network requests with full headers and response codes
-- When parsing complex websites, break tasks into sub-steps (open → wait → extract → format)
+Este procedimiento debe reutilizarse cada vez que se pida contar eventos en Ticketmaster por ciudad y fechas.

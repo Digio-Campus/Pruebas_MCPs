@@ -1,0 +1,256 @@
+{"type":"entity","name":"key","entityType":"memory_key","observations":["Valor: CH-2000","Clave de almacenamiento en Memory MCP para datos extraídos y conocimiento persistente","Sigue la convención de nomenclatura semántica del proyecto MCP"]}
+{"type":"entity","name":"Usuario","entityType":"persona","observations":["Usuario del sistema","Estudiante universitario"]}
+{"type":"entity","name":"Universidad de Murcia","entityType":"institución educativa","observations":["Universidad pública española","Siglas: UMU","Ubicación: Murcia, España"]}
+{"type":"entity","name":"Ingeniería Informática","entityType":"carrera universitaria","observations":["Grado universitario","Área: Tecnología e Informática"]}
+{"type":"entity","name":"Examen","entityType":"Evento","observations":["El usuario debe presentarse a este examen"]}
+{"type":"entity","name":"Fecha","entityType":"Fecha","observations":["Fecha en la que el usuario se presenta al examen"]}
+{"type":"entity","name":"Grado de Ingeniería Informática","entityType":"Titulación","observations":["Grado universitario impartido en la Universidad de Murcia"]}
+{"type":"entity","name":"Profesores","entityType":"Colectivo","observations":["Docentes que imparten el Grado de Ingeniería Informática"]}
+{"type":"entity","name":"Arquitectura y Tecnología de Computadores","entityType":"Área","observations":["Área de conocimiento del Grado en Ingeniería Informática de la UMU"]}
+{"type":"entity","name":"Ciencia de la Computación e Inteligencia Artificial","entityType":"Área","observations":["Área de conocimiento del Grado en Ingeniería Informática de la UMU"]}
+{"type":"entity","name":"Lenguajes y Sistemas Informáticos","entityType":"Área","observations":["Área de conocimiento del Grado en Ingeniería Informática de la UMU"]}
+{"type":"entity","name":"Ingeniería Telemática","entityType":"Área","observations":["Área de conocimiento del Grado en Ingeniería Informática de la UMU"]}
+{"type":"entity","name":"Matemática Aplicada","entityType":"Área","observations":["Área de conocimiento del Grado en Ingeniería Informática de la UMU"]}
+{"type":"entity","name":"Organización de Empresas","entityType":"Área","observations":["Área de conocimiento del Grado en Ingeniería Informática de la UMU"]}
+{"type":"entity","name":"Tecnología Electrónica","entityType":"Área","observations":["Área de conocimiento del Grado en Ingeniería Informática de la UMU"]}
+{"type":"entity","name":"Electrónica","entityType":"Área","observations":["Área de conocimiento del Grado en Ingeniería Informática de la UMU"]}
+{"type":"entity","name":"Teoría de la Señal y Comunicaciones","entityType":"Área","observations":["Área de conocimiento del Grado en Ingeniería Informática de la UMU"]}
+{"type":"entity","name":"Ingeniería de Sistemas y Automática","entityType":"Área","observations":["Área de conocimiento del Grado en Ingeniería Informática de la UMU"]}
+{"type":"entity","name":"Acacio Sanchez, Manuel Eugenio","entityType":"Profesor","observations":["Catedrático de Universidad","Área: Arquitectura y Tecnología de Computadores"]}
+{"type":"entity","name":"Aragon Alcaraz, Juan Luis","entityType":"Profesor","observations":["Catedrático de Universidad","Área: Arquitectura y Tecnología de Computadores"]}
+{"type":"entity","name":"Bernabe Garcia, Gregorio","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Arquitectura y Tecnología de Computadores"]}
+{"type":"entity","name":"Canovas Reverte, Oscar","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Arquitectura y Tecnología de Computadores"]}
+{"type":"entity","name":"Cebrian Gonzalez, Juan Manuel","entityType":"Profesor","observations":["Profesor Ayudante Doctor","Área: Arquitectura y Tecnología de Computadores"]}
+{"type":"entity","name":"Cuenca Muñoz, Antonio Javier","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Arquitectura y Tecnología de Computadores"]}
+{"type":"entity","name":"Fernandez Maimo, Lorenzo","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Arquitectura y Tecnología de Computadores"]}
+{"type":"entity","name":"Fernandez Pascual, Ricardo","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Arquitectura y Tecnología de Computadores"]}
+{"type":"entity","name":"Flores Gil, Antonio","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Arquitectura y Tecnología de Computadores"]}
+{"type":"entity","name":"Garcia Carrasco, Jose Manuel","entityType":"Profesor","observations":["Catedrático de Universidad","Área: Arquitectura y Tecnología de Computadores"]}
+{"type":"entity","name":"Garcia Clemente, Felix Jesus","entityType":"Profesor","observations":["Catedrático de Universidad","Área: Arquitectura y Tecnología de Computadores"]}
+{"type":"entity","name":"Gonzalez Ferez, Maria Pilar","entityType":"Profesor","observations":["Profesora Titular de Universidad","Área: Arquitectura y Tecnología de Computadores"]}
+{"type":"entity","name":"Jimborean, Alexandra","entityType":"Profesor","observations":["Profesora Titular de Universidad","Área: Arquitectura y Tecnología de Computadores"]}
+{"type":"entity","name":"Lopez de Teruel Alcolea, Pedro Enrique","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Arquitectura y Tecnología de Computadores"]}
+{"type":"entity","name":"Perales Gomez, Angel Luis","entityType":"Profesor","observations":["Profesor Ayudante Doctor","Área: Arquitectura y Tecnología de Computadores"]}
+{"type":"entity","name":"Piernas Canovas, Juan","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Arquitectura y Tecnología de Computadores"]}
+{"type":"entity","name":"Ros Bardisa, Alberto","entityType":"Profesor","observations":["Catedrático de Universidad","Área: Arquitectura y Tecnología de Computadores"]}
+{"type":"entity","name":"Sevilla Ruiz, Diego","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Arquitectura y Tecnología de Computadores"]}
+{"type":"entity","name":"Titos Gil, Jose Ruben","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Arquitectura y Tecnología de Computadores"]}
+{"type":"entity","name":"Bernal Bernabe, Jorge","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Botia Blaya, Juan Antonio","entityType":"Profesor","observations":["Catedrático de Universidad","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Cardenas Viedma, Maria Antonia","entityType":"Profesor","observations":["Profesora Titular de Universidad","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Garrido Carrera, Maria del Carmen","entityType":"Profesor","observations":["Profesora Titular de Universidad","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Gil Perez, Manuel","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Gomez Marmol, Felix","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Gonzalez Vidal, Aurora","entityType":"Profesor","observations":["Investigadora Ramón y Cajal","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Hernandez Molinero, Luis Daniel","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Huertas Celdran, Alberto","entityType":"Profesor","observations":["Profesor Ayudante Doctor","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Jimenez Barrionuevo, Fernando","entityType":"Profesor","observations":["Catedrático de Universidad","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Juarez Herrero, Jose Manuel","entityType":"Profesor","observations":["Catedrático de Universidad","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Marin-Blazquez Gomez, Francisco Javier","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Martinez España, Raquel","entityType":"Profesor","observations":["Profesora Titular de Universidad","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Martinez Perez, Gregorio","entityType":"Profesor","observations":["Catedrático de Universidad","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Martinez Sanchez, Antonio","entityType":"Profesor","observations":["Investigador Ramón y Cajal","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Nespoli, Pantaleone","entityType":"Profesor","observations":["Investigador Doctor","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Palma Mendez, Jose Tomas","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Pastor Galindo, Javier","entityType":"Profesor","observations":["Profesor Ayudante Doctor","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Sanchez Carpena, Gracia","entityType":"Profesor","observations":["Profesora Titular de Universidad","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Sanchez Laguna, Juan Antonio","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Valdes Vela, Mercedes","entityType":"Profesor","observations":["Profesora Titular de Universidad","Área: Ciencia de la Computación e Inteligencia Artificial"]}
+{"type":"entity","name":"Belda Moreno, Jose Pascual","entityType":"Profesor","observations":["Asociado a Tiempo Parcial","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Bermudez Ruiz, Francisco Javier","entityType":"Profesor","observations":["Profesor Colaborador","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Candel Romero, Maria Jose","entityType":"Profesor","observations":["Asociada a Tiempo Parcial","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Canovas Segura, Bernardo","entityType":"Profesor","observations":["Profesor Ayudante Doctor","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Cervera Lopez, Joaquin","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Fernandez Aleman, Jose Luis","entityType":"Profesor","observations":["Catedrático de Universidad","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Garcia Berna, Jose Alberto","entityType":"Profesor","observations":["Profesor Ayudante Doctor","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Garcia Diaz, Jose Antonio","entityType":"Profesor","observations":["Profesor Ayudante Doctor","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Garcia Mateos, Gines","entityType":"Profesor","observations":["Catedrático de Universidad","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Garcia Sanchez, Francisco","entityType":"Profesor","observations":["Catedrático de Universidad","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Hernandez Lopez, Jose Antonio","entityType":"Profesor","observations":["Profesor Ayudante Doctor","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Hoyos Barcelo, Jose Ramon","entityType":"Profesor","observations":["Profesor Permanente Laboral","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Majado Rosales, Maria Jose","entityType":"Profesor","observations":["Profesora Titular de Escuela Universitaria","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Martinez Costa, Catalina","entityType":"Profesor","observations":["Investigadora Ramón y Cajal","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Menarguez Tortosa, Marcos","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Miñarro Gimenez, Jose Antonio","entityType":"Profesor","observations":["Profesor Contratado Doctor","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Montoya Dato, Francisco Jose","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Moros Valle, Begoña","entityType":"Profesor","observations":["Profesora Titular de Universidad","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Nicolas Ros, Joaquin","entityType":"Profesor","observations":["Catedrático de Universidad","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Ortin Ibañez, Maria Jose","entityType":"Profesor","observations":["Profesora Titular de Escuela Universitaria","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Ruiz Garcia, Alberto","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Sanchez Cuadrado, Jesus","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Toval Alvarez, Jose Ambrosio","entityType":"Profesor","observations":["Catedrático de Universidad","Área: Lenguajes y Sistemas Informáticos"]}
+{"type":"entity","name":"Belmonte Rodriguez, Esteban","entityType":"Profesor","observations":["Asociado a Tiempo Parcial","Área: Ingeniería Telemática"]}
+{"type":"entity","name":"Bernal Escobedo, Luis","entityType":"Profesor","observations":["Profesor Sustituto","Área: Ingeniería Telemática"]}
+{"type":"entity","name":"Garcia Aviles, Gines","entityType":"Profesor","observations":["Investigador Doctor","Área: Ingeniería Telemática"]}
+{"type":"entity","name":"Garcia Rodriguez, Jesus","entityType":"Profesor","observations":["Investigador Doctor","Área: Ingeniería Telemática"]}
+{"type":"entity","name":"Hernandez Ramos, Jose Luis","entityType":"Profesor","observations":["Profesor Permanente Laboral","Área: Ingeniería Telemática"]}
+{"type":"entity","name":"Lopez Millan, Gabriel","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Ingeniería Telemática"]}
+{"type":"entity","name":"Marin Lopez, Rafael","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Ingeniería Telemática"]}
+{"type":"entity","name":"Martinez Barbera, Humberto","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Ingeniería Telemática"]}
+{"type":"entity","name":"Matheu Garcia, Sara Nieves","entityType":"Profesor","observations":["Profesora Ayudante Doctora","Área: Ingeniería Telemática"]}
+{"type":"entity","name":"Pereñiguez Garcia, Fernando","entityType":"Profesor","observations":["Profesor Ayudante Doctor","Área: Ingeniería Telemática"]}
+{"type":"entity","name":"Ruiz Martinez, Antonio","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Ingeniería Telemática"]}
+{"type":"entity","name":"Ruiz Martinez, Pedro Miguel","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Ingeniería Telemática"]}
+{"type":"entity","name":"Sanchez Iborra, Ramon Jesus","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Ingeniería Telemática"]}
+{"type":"entity","name":"Almira Picazo, Jose Maria","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Matemática Aplicada"]}
+{"type":"entity","name":"Cabrera Lozoya, Andres","entityType":"Profesor","observations":["Profesor Ayudante Doctor","Área: Matemática Aplicada"]}
+{"type":"entity","name":"del Toro Modolell, Naira","entityType":"Profesor","observations":["Asociada a Tiempo Parcial","Área: Matemática Aplicada"]}
+{"type":"entity","name":"Diaz Toca, Gema Maria","entityType":"Profesor","observations":["Profesora Titular de Universidad","Área: Matemática Aplicada"]}
+{"type":"entity","name":"Gonzalez Merino, Bernardo","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Matemática Aplicada"]}
+{"type":"entity","name":"Guil Asensio, Francisco de Asis","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Matemática Aplicada"]}
+{"type":"entity","name":"Marin Sola, Francisco","entityType":"Profesor","observations":["Profesor Ayudante Doctor","Área: Matemática Aplicada"]}
+{"type":"entity","name":"Vera Lopez, Francisco Jose","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Matemática Aplicada"]}
+{"type":"entity","name":"Lopez Nicolas, Carolina","entityType":"Profesor","observations":["Catedrática de Universidad","Área: Organización de Empresas"]}
+{"type":"entity","name":"Meroño Cerdan, Angel Luis","entityType":"Profesor","observations":["Catedrático de Universidad","Área: Organización de Empresas"]}
+{"type":"entity","name":"Soto Acosta, Pedro","entityType":"Profesor","observations":["Catedrático de Universidad","Área: Organización de Empresas"]}
+{"type":"entity","name":"Garcia Cuevas, Juan","entityType":"Profesor","observations":["Profesor Sustituto","Área: Tecnología Electrónica"]}
+{"type":"entity","name":"Martinez Navarro, Juan Antonio","entityType":"Profesor","observations":["Profesor Ayudante Doctor","Área: Tecnología Electrónica"]}
+{"type":"entity","name":"Zamora Izquierdo, Miguel Angel","entityType":"Profesor","observations":["Catedrático de Universidad","Área: Tecnología Electrónica"]}
+{"type":"entity","name":"Vargas Martin, Fernando","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Electrónica"]}
+{"type":"entity","name":"Victoria Navas, Leandro","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Electrónica"]}
+{"type":"entity","name":"Ubeda Miñarro, Benito","entityType":"Profesor","observations":["Profesor Titular de Universidad","Área: Teoría de la Señal y Comunicaciones"]}
+{"type":"entity","name":"Moreno Cava, Miguel","entityType":"Profesor","observations":["Profesor Titular de Escuela Universitaria","Área: Ingeniería de Sistemas y Automática"]}
+{"type":"entity","name":"Examenes_3_GII_Mayo_Junio_2026","entityType":"CalendarioExamenes","observations":["Grado en Ingeniería Informática - Universidad de Murcia","Convocatoria Mayo/Junio 2026","Curso: 3º","Fuente: https://www.um.es/documents/d/informatica/gii_dtie_calendarioexamenes_2025-26_v1-junio","Fecha extracción: 28/01/2026"]}
+{"type":"entity","name":"GPDS_1915","entityType":"AsignaturaExamen3GII","observations":["Asignatura: Gestión de Proyectos de Desarrollo de Software","Código: 1915","Acrónimo: GPDS","Curso: 3º GII (también 4º DTIE)","Fecha examen: Martes 12 Mayo 2026","Turno: Mañana"]}
+{"type":"entity","name":"TDS_1905","entityType":"AsignaturaExamen3GII","observations":["Asignatura: Tecnologías de Desarrollo de Software","Código: 1905","Acrónimo: TDS","Curso: 3º GII (también 4º DTIE)","Fecha examen: Miércoles 13 Mayo 2026","Turno: Mañana"]}
+{"type":"entity","name":"ASO_1907","entityType":"AsignaturaExamen3GII","observations":["Asignatura: Ampliación de Sistemas Operativos","Código: 1907","Acrónimo: ASO","Curso: 3º GII (también 3º DTIE)","Fecha examen: Jueves 14 Mayo 2026","Turno: Mañana"]}
+{"type":"entity","name":"PDS_1910","entityType":"AsignaturaExamen3GII","observations":["Asignatura: Procesos de Desarrollo de Software","Código: 1910","Acrónimo: PDS","Curso: 3º GII (también 4º DTIE)","Fecha examen: Viernes 15 Mayo 2026","Turno: Tarde"]}
+{"type":"entity","name":"TEII_1918","entityType":"AsignaturaExamen3GII","observations":["Asignatura: Tecnologías Específicas en la Ingeniería Informática","Código: 1918","Acrónimo: TEII","Curso: 3º GII","Fecha examen: Martes 19 Mayo 2026","Turno: Mañana"]}
+{"type":"entity","name":"AR_1908","entityType":"AsignaturaExamen3GII","observations":["Asignatura: Arquitectura de Redes","Código: 1908","Acrónimo: AR","Curso: 3º GII (también 3º DTIE)","Fecha examen: Miércoles 20 Mayo 2026","Turno: Mañana"]}
+{"type":"entity","name":"DPII_1916","entityType":"AsignaturaExamen3GII","observations":["Asignatura: Destrezas Profesionales de la Ingeniería Informática","Código: 1916","Acrónimo: DPII","Curso: 3º GII","Fecha examen: Viernes 22 Mayo 2026","Turno: Tarde"]}
+{"type":"entity","name":"SI_1906","entityType":"AsignaturaExamen3GII","observations":["Asignatura: Sistemas Inteligentes","Código: 1906","Acrónimo: SI","Curso: 3º GII (también 4º DTIE)","Fecha examen: Miércoles 27 Mayo 2026","Turno: Mañana"]}
+{"type":"entity","name":"AOC_1909","entityType":"AsignaturaExamen3GII","observations":["Asignatura: Arquitectura y Organización de Computadores","Código: 1909","Acrónimo: AOC","Curso: 3º GII (también 4º DTIE)","Fecha examen: Jueves 28 Mayo 2026","Turno: Tarde"]}
+{"type":"entity","name":"ST_1911","entityType":"AsignaturaExamen3GII","observations":["Asignatura: Servicios Telemáticos","Código: 1911","Acrónimo: ST","Curso: 3º GII (también 3º DTIE)","Fecha examen: Viernes 29 Mayo 2026","Turno: Tarde"]}
+{"type":"entity","name":"Llaves","entityType":"Objeto","observations":["Las llaves están debajo de la almohada"]}
+{"type":"entity","name":"Ticketmaster-Murcia-Conciertos","entityType":"ConcertList","observations":["Sitio: www.ticketmaster.es/discover/murcia","Ciudad: Murcia","10 eventos encontrados en la búsqueda","Conciertos extrados el 28/01/2026"]}
+{"type":"entity","name":"ELYELLA","entityType":"Concert","observations":["Nombre: ELYELLA - Lo más importante","Fecha: 31/1/26 (31 de enero de 2026)","Hora: 21:00","Lugar: Mamba","Ciudad: Murcia"]}
+{"type":"entity","name":"Fito & Fitipaldis","entityType":"Concert","observations":["Nombre: Fito & Fitipaldis - Aullidos Tour 25/26","Fecha: 21/2/26 (21 de febrero de 2026)","Hora: 20:30","Lugar: Palacio de los Deportes","Ciudad: Murcia","Estado: Disponibilidad limitada"]}
+{"type":"entity","name":"GRECAS","entityType":"Concert","observations":["Nombre: GRECAS","Fecha: 27/2/26 (27 de febrero de 2026)","Hora: 22:00","Lugar: Mamba","Ciudad: Murcia"]}
+{"type":"entity","name":"Celtas Cortos","entityType":"Concert","observations":["Nombre: Celtas Cortos - 40 años Contando Cuentos","Fecha: 21/3/26 (21 de marzo de 2026)","Hora: 21:00","Lugar: Palacio de los Deportes","Ciudad: Murcia"]}
+{"type":"entity","name":"Samuraï","entityType":"Concert","observations":["Nombre: Samuraï","Fecha: 27/3/26 (27 de marzo de 2026)","Hora: 22:00","Lugar: Mamba","Ciudad: Murcia"]}
+{"type":"entity","name":"Ramoncín","entityType":"Concert","observations":["Nombre: Ramoncín","Fecha: 18/4/26 (18 de abril de 2026)","Hora: 21:00","Lugar: Sala Garaje Beat Club","Ciudad: Murcia"]}
+{"type":"entity","name":"Marlon","entityType":"Concert","observations":["Nombre: Marlon","Fecha: 7/5/26 (7 de mayo de 2026)","Hora: 22:00","Lugar: Sala Rem","Ciudad: Murcia"]}
+{"type":"entity","name":"Uña Y Carne","entityType":"Concert","observations":["Nombre: Uña Y Carne - QUE LA RUMBA TE ACOMPAÑE","Fecha: 16/5/26 (16 de mayo de 2026)","Hora: 22:00","Lugar: Sala Rem","Ciudad: Murcia"]}
+{"type":"entity","name":"JPFernandez","entityType":"Concert","observations":["Nombre: JPFernandez","Fecha: 6/11/26 (6 de noviembre de 2026)","Hora: 21:00","Lugar: Sala Garaje Beat Club","Ciudad: Murcia"]}
+{"type":"entity","name":"Hard GZ","entityType":"Concert","observations":["Nombre: Hard GZ","Fecha: 21/11/26 (21 de noviembre de 2026)","Hora: 22:00","Lugar: Mamba","Ciudad: Murcia"]}
+{"type":"relation","from":"Usuario","to":"Universidad de Murcia","relationType":"estudia en"}
+{"type":"relation","from":"Usuario","to":"Ingeniería Informática","relationType":"cursa"}
+{"type":"relation","from":"Usuario","to":"Examen","relationType":"se presenta a"}
+{"type":"relation","from":"Usuario","to":"Fecha","relationType":"se presenta en"}
+{"type":"relation","from":"Examen","to":"Fecha","relationType":"tiene fecha"}
+{"type":"relation","from":"Universidad de Murcia","to":"Grado de Ingeniería Informática","relationType":"ofrece"}
+{"type":"relation","from":"Profesores","to":"Grado de Ingeniería Informática","relationType":"imparten"}
+{"type":"relation","from":"Acacio Sanchez, Manuel Eugenio","to":"Arquitectura y Tecnología de Computadores","relationType":"pertenece_a"}
+{"type":"relation","from":"Aragon Alcaraz, Juan Luis","to":"Arquitectura y Tecnología de Computadores","relationType":"pertenece_a"}
+{"type":"relation","from":"Bernabe Garcia, Gregorio","to":"Arquitectura y Tecnología de Computadores","relationType":"pertenece_a"}
+{"type":"relation","from":"Canovas Reverte, Oscar","to":"Arquitectura y Tecnología de Computadores","relationType":"pertenece_a"}
+{"type":"relation","from":"Garcia Carrasco, Jose Manuel","to":"Arquitectura y Tecnología de Computadores","relationType":"pertenece_a"}
+{"type":"relation","from":"Garcia Clemente, Felix Jesus","to":"Arquitectura y Tecnología de Computadores","relationType":"pertenece_a"}
+{"type":"relation","from":"Ros Bardisa, Alberto","to":"Arquitectura y Tecnología de Computadores","relationType":"pertenece_a"}
+{"type":"relation","from":"Titos Gil, Jose Ruben","to":"Arquitectura y Tecnología de Computadores","relationType":"pertenece_a"}
+{"type":"relation","from":"Bernal Bernabe, Jorge","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Botia Blaya, Juan Antonio","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Martinez Perez, Gregorio","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Jimenez Barrionuevo, Fernando","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Juarez Herrero, Jose Manuel","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Fernandez Aleman, Jose Luis","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Garcia Mateos, Gines","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Garcia Sanchez, Francisco","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Nicolas Ros, Joaquin","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Toval Alvarez, Jose Ambrosio","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Lopez Millan, Gabriel","to":"Ingeniería Telemática","relationType":"pertenece_a"}
+{"type":"relation","from":"Marin Lopez, Rafael","to":"Ingeniería Telemática","relationType":"pertenece_a"}
+{"type":"relation","from":"Almira Picazo, Jose Maria","to":"Matemática Aplicada","relationType":"pertenece_a"}
+{"type":"relation","from":"Lopez Nicolas, Carolina","to":"Organización de Empresas","relationType":"pertenece_a"}
+{"type":"relation","from":"Meroño Cerdan, Angel Luis","to":"Organización de Empresas","relationType":"pertenece_a"}
+{"type":"relation","from":"Soto Acosta, Pedro","to":"Organización de Empresas","relationType":"pertenece_a"}
+{"type":"relation","from":"Zamora Izquierdo, Miguel Angel","to":"Tecnología Electrónica","relationType":"pertenece_a"}
+{"type":"relation","from":"Cebrian Gonzalez, Juan Manuel","to":"Arquitectura y Tecnología de Computadores","relationType":"pertenece_a"}
+{"type":"relation","from":"Cuenca Muñoz, Antonio Javier","to":"Arquitectura y Tecnología de Computadores","relationType":"pertenece_a"}
+{"type":"relation","from":"Fernandez Maimo, Lorenzo","to":"Arquitectura y Tecnología de Computadores","relationType":"pertenece_a"}
+{"type":"relation","from":"Fernandez Pascual, Ricardo","to":"Arquitectura y Tecnología de Computadores","relationType":"pertenece_a"}
+{"type":"relation","from":"Flores Gil, Antonio","to":"Arquitectura y Tecnología de Computadores","relationType":"pertenece_a"}
+{"type":"relation","from":"Gonzalez Ferez, Maria Pilar","to":"Arquitectura y Tecnología de Computadores","relationType":"pertenece_a"}
+{"type":"relation","from":"Jimborean, Alexandra","to":"Arquitectura y Tecnología de Computadores","relationType":"pertenece_a"}
+{"type":"relation","from":"Lopez de Teruel Alcolea, Pedro Enrique","to":"Arquitectura y Tecnología de Computadores","relationType":"pertenece_a"}
+{"type":"relation","from":"Perales Gomez, Angel Luis","to":"Arquitectura y Tecnología de Computadores","relationType":"pertenece_a"}
+{"type":"relation","from":"Piernas Canovas, Juan","to":"Arquitectura y Tecnología de Computadores","relationType":"pertenece_a"}
+{"type":"relation","from":"Sevilla Ruiz, Diego","to":"Arquitectura y Tecnología de Computadores","relationType":"pertenece_a"}
+{"type":"relation","from":"Cardenas Viedma, Maria Antonia","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Garrido Carrera, Maria del Carmen","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Gil Perez, Manuel","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Gomez Marmol, Felix","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Gonzalez Vidal, Aurora","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Hernandez Molinero, Luis Daniel","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Huertas Celdran, Alberto","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Marin-Blazquez Gomez, Francisco Javier","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Martinez España, Raquel","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Martinez Sanchez, Antonio","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Nespoli, Pantaleone","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Palma Mendez, Jose Tomas","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Pastor Galindo, Javier","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Sanchez Carpena, Gracia","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Sanchez Laguna, Juan Antonio","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Valdes Vela, Mercedes","to":"Ciencia de la Computación e Inteligencia Artificial","relationType":"pertenece_a"}
+{"type":"relation","from":"Belda Moreno, Jose Pascual","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Bermudez Ruiz, Francisco Javier","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Candel Romero, Maria Jose","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Canovas Segura, Bernardo","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Cervera Lopez, Joaquin","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Garcia Berna, Jose Alberto","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Garcia Diaz, Jose Antonio","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Hernandez Lopez, Jose Antonio","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Hoyos Barcelo, Jose Ramon","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Majado Rosales, Maria Jose","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Martinez Costa, Catalina","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Menarguez Tortosa, Marcos","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Miñarro Gimenez, Jose Antonio","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Montoya Dato, Francisco Jose","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Moros Valle, Begoña","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Ortin Ibañez, Maria Jose","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Ruiz Garcia, Alberto","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Sanchez Cuadrado, Jesus","to":"Lenguajes y Sistemas Informáticos","relationType":"pertenece_a"}
+{"type":"relation","from":"Belmonte Rodriguez, Esteban","to":"Ingeniería Telemática","relationType":"pertenece_a"}
+{"type":"relation","from":"Bernal Escobedo, Luis","to":"Ingeniería Telemática","relationType":"pertenece_a"}
+{"type":"relation","from":"Garcia Aviles, Gines","to":"Ingeniería Telemática","relationType":"pertenece_a"}
+{"type":"relation","from":"Garcia Rodriguez, Jesus","to":"Ingeniería Telemática","relationType":"pertenece_a"}
+{"type":"relation","from":"Hernandez Ramos, Jose Luis","to":"Ingeniería Telemática","relationType":"pertenece_a"}
+{"type":"relation","from":"Martinez Barbera, Humberto","to":"Ingeniería Telemática","relationType":"pertenece_a"}
+{"type":"relation","from":"Matheu Garcia, Sara Nieves","to":"Ingeniería Telemática","relationType":"pertenece_a"}
+{"type":"relation","from":"Pereñiguez Garcia, Fernando","to":"Ingeniería Telemática","relationType":"pertenece_a"}
+{"type":"relation","from":"Ruiz Martinez, Antonio","to":"Ingeniería Telemática","relationType":"pertenece_a"}
+{"type":"relation","from":"Ruiz Martinez, Pedro Miguel","to":"Ingeniería Telemática","relationType":"pertenece_a"}
+{"type":"relation","from":"Sanchez Iborra, Ramon Jesus","to":"Ingeniería Telemática","relationType":"pertenece_a"}
+{"type":"relation","from":"Cabrera Lozoya, Andres","to":"Matemática Aplicada","relationType":"pertenece_a"}
+{"type":"relation","from":"del Toro Modolell, Naira","to":"Matemática Aplicada","relationType":"pertenece_a"}
+{"type":"relation","from":"Diaz Toca, Gema Maria","to":"Matemática Aplicada","relationType":"pertenece_a"}
+{"type":"relation","from":"Gonzalez Merino, Bernardo","to":"Matemática Aplicada","relationType":"pertenece_a"}
+{"type":"relation","from":"Guil Asensio, Francisco de Asis","to":"Matemática Aplicada","relationType":"pertenece_a"}
+{"type":"relation","from":"Marin Sola, Francisco","to":"Matemática Aplicada","relationType":"pertenece_a"}
+{"type":"relation","from":"Vera Lopez, Francisco Jose","to":"Matemática Aplicada","relationType":"pertenece_a"}
+{"type":"relation","from":"Garcia Cuevas, Juan","to":"Tecnología Electrónica","relationType":"pertenece_a"}
+{"type":"relation","from":"Martinez Navarro, Juan Antonio","to":"Tecnología Electrónica","relationType":"pertenece_a"}
+{"type":"relation","from":"Vargas Martin, Fernando","to":"Electrónica","relationType":"pertenece_a"}
+{"type":"relation","from":"Victoria Navas, Leandro","to":"Electrónica","relationType":"pertenece_a"}
+{"type":"relation","from":"Ubeda Miñarro, Benito","to":"Teoría de la Señal y Comunicaciones","relationType":"pertenece_a"}
+{"type":"relation","from":"Moreno Cava, Miguel","to":"Ingeniería de Sistemas y Automática","relationType":"pertenece_a"}
+{"type":"relation","from":"GPDS_1915","to":"Examenes_3_GII_Mayo_Junio_2026","relationType":"pertenece_a"}
+{"type":"relation","from":"TDS_1905","to":"Examenes_3_GII_Mayo_Junio_2026","relationType":"pertenece_a"}
+{"type":"relation","from":"ASO_1907","to":"Examenes_3_GII_Mayo_Junio_2026","relationType":"pertenece_a"}
+{"type":"relation","from":"PDS_1910","to":"Examenes_3_GII_Mayo_Junio_2026","relationType":"pertenece_a"}
+{"type":"relation","from":"TEII_1918","to":"Examenes_3_GII_Mayo_Junio_2026","relationType":"pertenece_a"}
+{"type":"relation","from":"AR_1908","to":"Examenes_3_GII_Mayo_Junio_2026","relationType":"pertenece_a"}
+{"type":"relation","from":"DPII_1916","to":"Examenes_3_GII_Mayo_Junio_2026","relationType":"pertenece_a"}
+{"type":"relation","from":"SI_1906","to":"Examenes_3_GII_Mayo_Junio_2026","relationType":"pertenece_a"}
+{"type":"relation","from":"AOC_1909","to":"Examenes_3_GII_Mayo_Junio_2026","relationType":"pertenece_a"}
+{"type":"relation","from":"ST_1911","to":"Examenes_3_GII_Mayo_Junio_2026","relationType":"pertenece_a"}
+{"type":"relation","from":"MCP-Test-Session","to":"Universidad-de-Murcia","relationType":"tested"}{"type": "concert", "name": "ELYELLA - Lo más importante", "date": "31/1/26", "city": "Murcia", "venue": "Mamba", "time": "21:00", "source": "Ticketmaster"}
+{"type": "concert", "name": "Fito & Fitipaldis - Aullidos Tour 25/26", "date": "21/2/26", "city": "Murcia", "venue": "Palacio de los Deportes", "time": "20:30", "source": "Ticketmaster"}
+{"type": "concert", "name": "GRECAS", "date": "27/2/26", "city": "Murcia", "venue": "Mamba", "time": "22:00", "source": "Ticketmaster"}
+{"type": "concert", "name": "Celtas Cortos - 40 años Contando Cuentos", "date": "21/3/26", "city": "Murcia", "venue": "Palacio de los Deportes", "time": "21:00", "source": "Ticketmaster"}
+{"type": "concert", "name": "Samuraï", "date": "27/3/26", "city": "Murcia", "venue": "Mamba", "time": "22:00", "source": "Ticketmaster"}
+{"type": "concert", "name": "Ramoncín", "date": "18/4/26", "city": "Murcia", "venue": "Sala Garaje Beat Club", "time": "21:00", "source": "Ticketmaster"}
+{"type": "concert", "name": "Marlon", "date": "7/5/26", "city": "Murcia", "venue": "Sala Rem", "time": "22:00", "source": "Ticketmaster"}
+{"type": "concert", "name": "Uña Y Carne - QUE LA RUMBA TE ACOMPAÑE", "date": "16/5/26", "city": "Murcia", "venue": "Sala Rem", "time": "22:00", "source": "Ticketmaster"}
+{"type": "concert", "name": "JPFernandez", "date": "6/11/26", "city": "Murcia", "venue": "Sala Garaje Beat Club", "time": "21:00", "source": "Ticketmaster"}
+{"type": "concert", "name": "Hard GZ", "date": "21/11/26", "city": "Murcia", "venue": "Mamba", "time": "22:00", "source": "Ticketmaster"}
