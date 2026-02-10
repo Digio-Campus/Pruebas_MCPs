@@ -1,0 +1,132 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    TIC TAC TOE - INICIO RÁPIDO                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+REQUISITOS PREVIOS
+═════════════════════════════════════════════════════════════════════════════
+
+1. Sistema: Linux o macOS
+2. Compilador: g++
+3. Librería: ncurses-dev
+
+En Ubuntu/Debian:
+  sudo apt-get install build-essential ncurses-dev
+
+En Fedora/RHEL:
+  sudo dnf install gcc-c++ ncurses-devel
+
+En macOS:
+  brew install ncurses
+
+COMPILACIÓN
+═════════════════════════════════════════════════════════════════════════════
+
+Opción 1 - Con Makefile (RECOMENDADO):
+  cd tictactoe
+  make
+  ./tictactoe
+
+Opción 2 - Manual:
+  cd tictactoe
+  g++ -Wall -Wextra -std=c++11 -O2 -o tictactoe *.cpp -lncurses
+  ./tictactoe
+
+EJECUCIÓN
+═════════════════════════════════════════════════════════════════════════════
+
+  ./tictactoe
+
+Verás el menú principal con 4 opciones.
+
+CONTROLES BÁSICOS
+═════════════════════════════════════════════════════════════════════════════
+
+Menú:         Números (1-4)
+Movimiento:   Flechas o WASD
+Colocar:      ENTER
+Cambiar tablero: TAB
+Reiniciar:    R
+Salir:        ESC
+
+ARCHIVOS IMPORTANTES
+═════════════════════════════════════════════════════════════════════════════
+
+README.md           - Guía completa del proyecto
+COMPILACION.md      - Instrucciones detalladas de compilación
+INSTRUCCIONES.md    - Manual de uso con ejemplos
+RESUMEN_PROYECTO.md - Información técnica del proyecto
+
+EJEMPLOS DE USO RÁPIDO
+═════════════════════════════════════════════════════════════════════════════
+
+Ejemplo 1 - Ver demostración automática:
+  1. Ejecuta: ./tictactoe
+  2. Selecciona: 1 (Jugar)
+  3. Selecciona: 1 (0 Jugadores)
+  4. Selecciona: 5 (9 Tableros)
+  5. Observa: Se llenan automáticamente
+
+Ejemplo 2 - Jugar manualmente:
+  1. Ejecuta: ./tictactoe
+  2. Selecciona: 1 (Jugar)
+  3. Selecciona: 2 (1 Jugador)
+  4. Selecciona: 1 (1 Tablero)
+  5. Usa flechas + ENTER para jugar
+
+Ejemplo 3 - Jugar vs IA:
+  1. Ejecuta: ./tictactoe
+  2. Selecciona: 1 (Jugar)
+  3. Selecciona: 3 (2 Jugadores)
+  4. Selecciona: 2 (2 Tableros)
+  5. Haz tu movimiento, la IA responde
+
+ESTRUCTURA DE ARCHIVOS
+═════════════════════════════════════════════════════════════════════════════
+
+board.h/cpp    - Lógica del tablero individual
+game.h/cpp     - Coordinación de múltiples tableros
+ui.h/cpp       - Interfaz con ncurses
+main.cpp       - Punto de entrada
+Makefile       - Compilación
+tictactoe      - Ejecutable compilado
+
+SOLUCIÓN DE PROBLEMAS
+═════════════════════════════════════════════════════════════════════════════
+
+Error: "ncurses.h: No such file or directory"
+  → Instala: sudo apt-get install ncurses-dev
+
+Error: "undefined reference to `initscr'"
+  → Asegúrate de agregar: -lncurses al compilar
+
+Terminal corrupta después de ejecutar:
+  → Ejecuta: reset
+
+El programa se cuelga:
+  → Presiona: Ctrl+C o ESC
+
+DOCUMENTACIÓN
+═════════════════════════════════════════════════════════════════════════════
+
+Para más información, consulta:
+  - README.md: características y guía general
+  - COMPILACION.md: instrucciones de compilación detalladas
+  - INSTRUCCIONES.md: manual completo de uso con ejemplos
+  - RESUMEN_PROYECTO.md: información técnica y arquitectura
+
+CONTACTO / SOPORTE
+═════════════════════════════════════════════════════════════════════════════
+
+Este es un proyecto educativo de demostración.
+Todos los archivos están bien documentados y listos para usar.
+
+Para compilar y ejecutar sin errores, asegúrate de tener:
+  ✓ g++ instalado
+  ✓ ncurses-dev instalado
+  ✓ Terminal con al menos 60x20 caracteres
+
+¡Disfruta jugando!
+
+═════════════════════════════════════════════════════════════════════════════
+Tic Tac Toe v1.0 - Proyecto completo en C++ con ncurses
+═════════════════════════════════════════════════════════════════════════════

@@ -205,6 +205,13 @@ void UI::drawGame(const Settings& s,
 
   auto rects = layoutBoards(static_cast<int>(boards.size()));
 
+  mvaddnstr(h - 2, 1,
+            "Arrows: mover  Enter/Esp: jugar  Tab: tablero  r/R: reset  q: salir  (p: pausa auto)",
+            w - 2);
+
+  // Evita parpadeo: no hagas refresh por tablero (mostraba frames vacíos entre updates).
+  wnoutrefresh(stdscr);
+
   for (int i = 0; i < static_cast<int>(boards.size()); ++i) {
     const auto& br = rects[i];
 
@@ -279,13 +286,9 @@ void UI::drawGame(const Settings& s,
     stats << "X:" << boards[i].xWins() << " O:" << boards[i].oWins() << " =:" << boards[i].draws();
     mvwaddnstr(win, br.h - 2, 2, stats.str().c_str(), br.w - 4);
 
-    wrefresh(win);
+    wnoutrefresh(win);
     delwin(win);
   }
 
-  mvaddnstr(h - 2, 1,
-            "Arrows: mover  Enter/Esp: jugar  Tab: tablero  r/R: reset  q: salir  (p: pausa auto)",
-            w - 2);
-
-  refresh();
+  doupdate();
 }
