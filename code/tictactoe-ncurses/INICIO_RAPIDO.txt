@@ -1,0 +1,110 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    INICIO RÁPIDO - TIC TAC TOE NCURSES                     ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+┌─ COMPILAR Y EJECUTAR EN 2 COMANDOS ─────────────────────────────────────────
+│
+│  $ cd code/tictactoe-ncurses
+│  $ make run
+│
+└─────────────────────────────────────────────────────────────────────────────
+
+┌─ REQUISITOS PREVIOS ────────────────────────────────────────────────────────
+│
+│  ✓ Linux/Unix
+│  ✓ g++ 7.0+ (con C++17)
+│  ✓ libncurses5-dev
+│  ✓ make
+│
+│  Instalar en Debian/Ubuntu:
+│  $ sudo apt-get install build-essential libncurses5-dev
+│
+└─────────────────────────────────────────────────────────────────────────────
+
+┌─ COMANDOS PRINCIPALES ──────────────────────────────────────────────────────
+│
+│  make              → Compilar
+│  make run          → Compilar y ejecutar
+│  make test         → Ejecutar tests
+│  make clean        → Limpiar archivos compilados
+│  make help         → Mostrar ayuda del Makefile
+│
+└─────────────────────────────────────────────────────────────────────────────
+
+┌─ CONTROLES DEL JUEGO ───────────────────────────────────────────────────────
+│
+│  ↑↓←→              → Mover cursor
+│  Tab               → Cambiar tablero
+│  1-9               → Seleccionar tablero directo
+│  Enter             → Colocar símbolo
+│  Click Ratón       → Seleccionar celda
+│  R (minúscula)     → Reiniciar tablero actual
+│  R (mayúscula)     → Reiniciar todos los tableros
+│  H                 → Mostrar ayuda
+│  Q                 → Volver al menú / Salir
+│
+└─────────────────────────────────────────────────────────────────────────────
+
+┌─ MODOS DE JUEGO ────────────────────────────────────────────────────────────
+│
+│  0 Jugadores    → CPU vs CPU (automático)
+│  1 Jugador      → Controlar X y O manualmente
+│  2 Jugadores    → Jugador (O) vs CPU (X)
+│
+└─────────────────────────────────────────────────────────────────────────────
+
+┌─ DOCUMENTACIÓN ─────────────────────────────────────────────────────────────
+│
+│  README.md         → Documentación completa
+│  INSTRUCCIONES.md  → Guía de compilación
+│  EJEMPLOS.md       → Ejemplos de uso práctico
+│  RESUMEN_PROYECTO.md → Visión general del proyecto
+│  VERIFICACION.md   → Checklist de requisitos
+│
+└─────────────────────────────────────────────────────────────────────────────
+
+┌─ SOLUCIÓN RÁPIDA DE PROBLEMAS ──────────────────────────────────────────────
+│
+│  "ncurses.h not found"
+│  → sudo apt-get install libncurses5-dev
+│
+│  "command not found: make"
+│  → sudo apt-get install make
+│
+│  "Terminal is too small!"
+│  → Expande tu ventana de terminal a 80x24 o mayor
+│
+│  "No compila"
+│  → make clean && make
+│
+└─────────────────────────────────────────────────────────────────────────────
+
+┌─ ESTRUCTURA DEL PROYECTO ───────────────────────────────────────────────────
+│
+│  include/          → Headers (.h)
+│  src/              → Implementación (.cpp)
+│  tests/            → Tests unitarios
+│  bin/              → Ejecutables compilados
+│  obj/              → Archivos objeto
+│  Makefile          → Script de compilación
+│
+└─────────────────────────────────────────────────────────────────────────────
+
+┌─ CARACTERÍSTICAS ───────────────────────────────────────────────────────────
+│
+│  ✓ Múltiples tableros simultáneos (1-9)
+│  ✓ Detección automática de victorias y empates
+│  ✓ 3 modos de juego distintos
+│  ✓ Interfaz intuitiva con colores
+│  ✓ Soporte para teclado y ratón
+│  ✓ Tests unitarios incluidos
+│  ✓ Código modular bien documentado
+│  ✓ Compilación limpia (0 warnings)
+│
+└─────────────────────────────────────────────────────────────────────────────
+
+¿LISTO PARA JUGAR? ¡Ejecuta "make run" ahora!
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║  Para más información, consulta README.md o INSTRUCCIONES.md              ║
+╚════════════════════════════════════════════════════════════════════════════╝

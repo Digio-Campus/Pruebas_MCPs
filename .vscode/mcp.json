@@ -6,10 +6,10 @@
     },
     "memory": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "args": ["-y", "@modelcontextprotocol/server-memory@latest"],
       "env": {
         "MEMORY_PERSIST": "true",
-        "MEMORY_FILE_PATH": "${workspaceFolder}/data/memory.jsonl"
+        "MEMORY_FILE_PATH": "/home/chaimaa/Escritorio/UNIVERSIDAD/SEGUNDA RONDA/PRA_DOC/Proyecto-MCPs/data/memory.jsonl"
       }
     }
   }
