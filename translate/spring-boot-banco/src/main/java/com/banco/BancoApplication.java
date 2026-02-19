@@ -1,0 +1,18 @@
+/**
+ * Aplicación principal Spring Boot.
+ * Traducida desde los programas COBOL bancarios del directorio translate/.
+ *
+ * @author PROYECTO-MCPS
+ */
+package com.banco;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class BancoApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(BancoApplication.class, args);
+    }
+}
