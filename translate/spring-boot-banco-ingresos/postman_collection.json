@@ -1,0 +1,290 @@
+{
+  "info": {
+    "_postman_id": "banco-ingresos-api",
+    "name": "Banco Ingresos API",
+    "description": "Colección de Postman para probar la API REST de Banco Ingresos (Traducción COBOL → Spring Boot)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Procesar Ingresos - Flujo Principal",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"importe\": 1500.50,\n    \"concepto\": \"Salario mensual\",\n    \"descripcion\": \"Pago de nómina febrero 2026\"\n  },\n  {\n    \"importe\": 250.00,\n    \"concepto\": \"Bonificación\",\n    \"descripcion\": \"Bonificación por desempeño\"\n  },\n  {\n    \"importe\": 100.75,\n    \"concepto\": \"Intereses\",\n    \"descripcion\": \"Intereses de la cuenta\"\n  }\n]"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/ingresos/procesar?numeroCuenta=1234567890&titular=Juan%20Pérez",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "ingresos",
+            "procesar"
+          ],
+          "query": [
+            {
+              "key": "numeroCuenta",
+              "value": "1234567890"
+            },
+            {
+              "key": "titular",
+              "value": "Juan Pérez"
+            }
+          ]
+        },
+        "description": "Procesa un conjunto de ingresos para una cuenta bancaria.\nMapeo de párrafos COBOL:\n- 0000-PRINCIPAL\n- 1000-INICIALIZAR\n- 2000-PEDIR-DATOS-CUENTA\n- 3000-REGISTRAR-INGRESOS\n- 4000-CALCULAR-TOTAL\n- 5000-MOSTRAR-RESUMEN\n- 9000-FINALIZAR"
+      },
+      "response": []
+    },
+    {
+      "name": "2. Procesar Ingresos - Un solo ingreso",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"importe\": 5000.00,\n    \"concepto\": \"Depósito inicial\",\n    \"descripcion\": \"Apertura de cuenta\"\n  }\n]"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/ingresos/procesar?numeroCuenta=9876543210&titular=María%20García",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "ingresos",
+            "procesar"
+          ],
+          "query": [
+            {
+              "key": "numeroCuenta",
+              "value": "9876543210"
+            },
+            {
+              "key": "titular",
+              "value": "María García"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3. Obtener Cuenta por ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/ingresos/cuentas/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "ingresos",
+            "cuentas",
+            "1"
+          ]
+        },
+        "description": "Obtiene los detalles completos de una cuenta incluyendo todos sus ingresos.\nNota: Reemplace el último parámetro (1) con el ID de la cuenta deseada."
+      },
+      "response": []
+    },
+    {
+      "name": "4. Obtener Cuenta por Número",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/ingresos/cuentas/numero/1234567890",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "ingresos",
+            "cuentas",
+            "numero",
+            "1234567890"
+          ]
+        },
+        "description": "Obtiene una cuenta bancaria por su número identificador."
+      },
+      "response": []
+    },
+    {
+      "name": "5. Agregar Ingreso a Cuenta",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"importe\": 750.00,\n  \"concepto\": \"Transferencia recibida\",\n  \"descripcion\": \"Transferencia de Juan López\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/ingresos/cuentas/1/agregar-ingreso",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "ingresos",
+            "cuentas",
+            "1",
+            "agregar-ingreso"
+          ]
+        },
+        "description": "Agrega un nuevo ingreso a una cuenta existente.\nNota: Reemplace el parámetro (1) con el ID de la cuenta deseada."
+      },
+      "response": []
+    },
+    {
+      "name": "❌ Error: Importe inválido (negativo)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"importe\": -100.00,\n    \"concepto\": \"Ingreso inválido\"\n  }\n]"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/ingresos/procesar?numeroCuenta=ERROR001&titular=Test",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "ingresos",
+            "procesar"
+          ],
+          "query": [
+            {
+              "key": "numeroCuenta",
+              "value": "ERROR001"
+            },
+            {
+              "key": "titular",
+              "value": "Test"
+            }
+          ]
+        },
+        "description": "Demuestra el manejo de error cuando el importe es negativo.\nRespuesta esperada: 400 Bad Request"
+      },
+      "response": []
+    },
+    {
+      "name": "❌ Error: Concepto vacío",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"importe\": 100.00,\n    \"concepto\": \"\"\n  }\n]"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/ingresos/procesar?numeroCuenta=ERROR002&titular=Test2",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "ingresos",
+            "procesar"
+          ],
+          "query": [
+            {
+              "key": "numeroCuenta",
+              "value": "ERROR002"
+            },
+            {
+              "key": "titular",
+              "value": "Test2"
+            }
+          ]
+        },
+        "description": "Demuestra el manejo de error cuando el concepto está vacío.\nRespuesta esperada: 400 Bad Request"
+      },
+      "response": []
+    },
+    {
+      "name": "❌ Error: Cuenta no encontrada",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/ingresos/cuentas/9999",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "ingresos",
+            "cuentas",
+            "9999"
+          ]
+        },
+        "description": "Demuestra el manejo de error cuando una cuenta no existe.\nRespuesta esperada: 404 Not Found"
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080/banco-ingresos",
+      "type": "string"
+    }
+  ]
+}

@@ -11,6 +11,13 @@
         "MEMORY_PERSIST": "true",
         "MEMORY_FILE_PATH": "/home/chaimaa/Escritorio/UNIVERSIDAD/SEGUNDA RONDA/PRA_DOC/Proyecto-MCPs/data/memory.jsonl"
       }
+    },
+    "remembrances": {
+      "command": "/home/chaimaa/Descargas/remembrances-mcp-cpu-linux-x86_64/remembrances-mcp",
+      "args": [
+        "--gguf-model-path",
+        "/home/chaimaa/Descargas/remembrances-mcp-cpu-linux-x86_64/nomic-embed-text-v1.5.Q4_K_M.gguf"
+      ]
     }
   }
 }

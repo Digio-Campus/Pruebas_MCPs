@@ -1,7 +1,7 @@
 # INFORME 7 — Memory MCP para Traducción COBOL → Spring Boot
 
 **Fecha:** 19/02/2026  
-**Objetivo:** Estructurar la memoria del MCP Memory con separadores lógicos que agilicen la traducción de programas COBOL bancarios a Spring Boot, y ejecutar la traducción completa guiada por el grafo de conocimiento.
+**Objetivo:** Estructurar la memoria del MCP Memory con separadores lógicos que agilicen la traducción de programas COBOL bancarios a Spring Boot, ejecutar la traducción completa guiada por el grafo de conocimiento, y verificar el funcionamiento en navegador.
 
 ---
 
@@ -82,7 +82,7 @@ COBOL-SpringBoot-Traduccion  (nodo raíz)
 
 ## 3. Proceso de Traducción Guiado por el Grafo
 
-Se recorrió el grafo paso a paso, consultando cada nodo antes de traducir:
+Se recorrió el grafo paso a paso, consultando cada nodo con `open_nodes` antes de traducir:
 
 ### Paso 1: `COBOL-SpringBoot-Traduccion` (nodo raíz)
 - Aprendido: la traducción se hace por BLOQUES LÓGICOS
@@ -138,9 +138,43 @@ Se recorrió el grafo paso a paso, consultando cada nodo antes de traducir:
 
 ---
 
-## 4. Proyecto Spring Boot Generado
+## 4. Panel de Pruebas HTML (Frontend)
 
-### 4.1 Estructura de Ficheros (27 ficheros)
+### 4.1 Decisión: HTML Frontend vs Cambiar la API
+
+Los endpoints POST (`/api/ingresos`, `/api/transferencias`) no se pueden probar directamente desde la barra de un navegador. Se evaluaron dos opciones:
+
+| Opción | Pros | Contras |
+|--------|------|---------|
+| **Cambiar POST → GET** | Funciona en barra de navegador | Rompe el diseño REST correcto; semánticamente incorrecto |
+| **Crear HTML con formularios** ✅ | Mantiene REST correcto; UX visual; reutilizable | Un fichero adicional |
+
+**Decisión:** Crear un `index.html` estático en `src/main/resources/static/` que Spring Boot sirve automáticamente en la raíz `/`. Así se conserva el diseño REST correcto (POST para crear, GET para consultar) y se obtiene un panel visual de pruebas.
+
+### 4.2 Características del Panel
+
+- **5 tarjetas** (una por programa COBOL traducido), cada una con:
+  - Badge visual `GET` (verde) o `POST` (naranja)
+  - Referencia al fichero COBOL de origen
+  - Campos de entrada editables
+  - Botón de ejecución que hace `fetch()` a la API
+  - Área de resultado con formato JSON coloreado
+- **Datos pre-rellenados** con las 3 cuentas disponibles
+- **Sin dependencias externas** — HTML + CSS + JavaScript vanilla
+
+### 4.3 Acceso
+
+```
+http://localhost:8085/
+```
+
+El panel se carga automáticamente como página de bienvenida (welcome page) de Spring Boot.
+
+---
+
+## 5. Proyecto Spring Boot Generado
+
+### 5.1 Estructura de Ficheros (28 ficheros)
 
 ```
 translate/spring-boot-banco/
@@ -179,40 +213,122 @@ translate/spring-boot-banco/
     │       └── GlobalExceptionHandler.java
     └── resources/
         ├── application.properties
-        └── data.sql
+        ├── data.sql
+        └── static/
+            └── index.html                     ← Panel de pruebas
 ```
 
-### 4.2 Endpoints REST Generados
+### 5.2 Endpoints REST
 
 | Método | Endpoint | Origen COBOL | Descripción |
 |--------|----------|-------------|-------------|
+| GET | `/` | — | Panel HTML de pruebas |
 | GET | `/hello` | tra1.cbl | Hello World |
 | POST | `/api/ingresos/{cuenta}` | banco-ingresos.cbl | Registrar ingresos, devuelve suma total |
 | GET | `/api/saldo/{cuenta}` | banco-consulta-saldo.cbl | Consultar saldo |
 | POST | `/api/transferencias` | banco-transferencia.cbl | Transferencia con comisiones |
 | GET | `/api/extracto/{cuenta}` | banco-extracto.cbl | Extracto de movimientos |
 
+### 5.3 Cómo Ejecutar
+
+```bash
+cd translate/spring-boot-banco
+mvn spring-boot:run
+```
+
+Abrir en navegador: **http://localhost:8085/**
+
 ---
 
-## 5. Resultado de la Prueba
+## 6. Verificación de Endpoints
+
+Se probaron todos los endpoints con `curl` tras arrancar la aplicación:
+
+### GET /hello
+```
+Hello World!
+```
+
+### GET /api/saldo/ES1234567890123456
+```json
+{
+  "numeroCuenta": "ES1234567890123456",
+  "titular": "GARCIA LOPEZ, MARIA",
+  "tipoCuenta": "CORRIENTE",
+  "saldoDisponible": 15250.75,
+  "saldoRetenido": 500.0,
+  "saldoTotal": 15750.75
+}
+```
+
+### GET /api/extracto/ES1234567890123456?saldoInicial=5000
+```json
+{
+  "numeroCuenta": "ES1234567890123456",
+  "titular": "GARCIA LOPEZ, MARIA",
+  "saldoInicial": 5000,
+  "movimientos": [
+    { "fecha": "2026-02-01", "concepto": "NOMINA FEBRERO", "tipo": "I", "importe": 2500.0 },
+    { "fecha": "2026-02-03", "concepto": "ALQUILER VIVIENDA", "tipo": "G", "importe": 850.0 },
+    ...
+  ],
+  "totalIngresos": 3300.0,
+  "totalGastos": 1205.8,
+  "saldoFinal": 7094.2
+}
+```
+
+### POST /api/ingresos/ES1234567890123456
+```json
+{
+  "numeroCuenta": "ES1234567890123456",
+  "titular": "GARCIA LOPEZ, MARIA",
+  "numIngresos": 1,
+  "sumaTotal": 100
+}
+```
+
+### POST /api/transferencias
+```json
+{
+  "fecha": "2026-02-19",
+  "hora": "14:26:44",
+  "cuentaOrigen": "ES1234567890123456",
+  "cuentaDestino": "ES9876543210987654",
+  "importe": 500,
+  "comision": 0,
+  "importeTotal": 500,
+  "nuevoSaldoOrigen": 14850.75,
+  "nuevoSaldoDestino": 42500.0
+}
+```
+
+---
+
+## 7. Resultado de la Prueba
 
 | Aspecto | Resultado |
 |---------|-----------|
 | Programas COBOL traducidos | ✅ 5/5 programas (incluido HelloWorld) |
-| Entidades en Memory | ✅ 9 entidades genéricas (sin info específica de ficheros) |
+| Entidades en Memory | ✅ 9 entidades genéricas (sin info específica) |
 | Navegación del grafo | ✅ Solucionado con observaciones `>> NAVEGACIÓN:` |
-| Recorrido completo desde raíz | ✅ 9/9 nodos accesibles desde `COBOL-SpringBoot-Traduccion` |
-| Ficheros Java generados | ✅ 27 ficheros en estructura Spring Boot estándar |
-| Patrones bancarios aplicados | ✅ BigDecimal, @Transactional, excepciones custom |
+| Recorrido completo desde raíz | ✅ 9/9 nodos accesibles |
+| Compilación Maven | ✅ `mvn compile` sin errores |
+| Arranque Spring Boot | ✅ Tomcat en puerto 8085, datos cargados |
+| GET /hello | ✅ "Hello World!" |
+| GET /api/saldo/{cuenta} | ✅ Saldo correcto con 3 cuentas |
+| GET /api/extracto/{cuenta} | ✅ 8 movimientos, totales correctos |
+| POST /api/ingresos/{cuenta} | ✅ Suma total calculada, saldo actualizado |
+| POST /api/transferencias | ✅ Comisión, validación, saldos actualizados |
+| Panel HTML en navegador | ✅ index.html servido en `/`, formularios funcionales |
 | Bean Validation | ✅ @NotBlank, @Positive, @Size en DTOs |
-| Datos iniciales | ✅ data.sql con 3 cuentas y 8 movimientos simulados |
 
 ### Conclusiones
 
-1. **Problema del MCP Memory:** `open_nodes` no devuelve relaciones al consultar un solo nodo. La solución de añadir observaciones `>> NAVEGACIÓN:` en cada entidad permite recorrer el grafo completo sin depender de las relaciones del MCP.
+1. **Problema del MCP Memory:** `open_nodes` no devuelve relaciones al consultar un solo nodo. La solución de añadir observaciones `>> NAVEGACIÓN:` en cada entidad permite recorrer el grafo completo.
 
-2. **Eficacia de la memoria estructurada:** El recorrido secuencial del grafo (IDENTIFICATION → DATA → PROCEDURE → ENVIRONMENT → VALIDACIONES) permitió traducir cada programa COBOL de forma sistemática, aplicando las reglas correctas en cada fase.
+2. **Traducción fiel:** Cada párrafo COBOL se mapeó a un método Java. Los `DISPLAY` → `log.info()` + `ResponseEntity`, los `ACCEPT` → `@RequestBody/@PathVariable`, las operaciones aritméticas → `BigDecimal`.
 
-3. **Traducción fiel:** Cada párrafo COBOL (`0000-PRINCIPAL`, `3000-REGISTRAR-INGRESOS`, etc.) se mapeó a un método Java. Los `DISPLAY` se convirtieron en `log.info()` + `ResponseEntity`, los `ACCEPT` en `@RequestBody/@PathVariable`, y las operaciones aritméticas en `BigDecimal`.
+3. **Frontend HTML:** Se creó un panel de pruebas estático (`index.html`) en lugar de cambiar los POST a GET. Esto mantiene el diseño REST correcto y permite probar todos los endpoints desde el navegador con formularios y respuestas JSON formateadas.
 
 4. **Reutilización:** La memoria no contiene información específica de los programas traducidos, por lo que puede usarse para traducir cualquier otro programa COBOL bancario en el futuro.
