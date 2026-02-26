@@ -1,0 +1,17 @@
+## Índice
+
+- [Pruebas del MCP chrome-devtools con GitHub Copilot](docs/CHROME_DEVTOOLS.md)
+- [Pruebas del MCP memory con GitHub Copilot](docs/MCP_MEMORY.md)
+- [Uso combinado de los MCPs chrome_devtools y memory](docs/PRUEBAS_MCP.md)
+- [Prueba de funcionamiento GitHub Copilot CLI con ambos MCPs](docs/COPILOT_CLI.md)
+- [Comparativa de implementación del juego de TicTacToe con y sin memory](docs/INFORME.md)
+- [Modelos y reestructuración de la memoria para incluir movimiento con el ratón](docs/MODELOS.md)
+- [Comparación de mejora tras el uso de memory después de reestructurar la memoria](docs/INFORME2.md)
+- [Árbol de Relaciones del Grafo de Conocimiento para TicTacToe-ncurses](docs/INFORME3.md)
+- [Comparativa del Impacto del MCP Memory en Grok vs Raptor para TicTacToe](docs/INFORME4.md)
+- [Mejora de la Memoria con Buenas Prácticas C++ para TicTacToe](docs/INFORME5.md)
+- [Análisis Comparativo de Proyectos TicTacToe con Claude Haiku](docs/INFORME6.md)
+- [Memory MCP para Traducción COBOL → Spring Boot](docs/INFORME7.md)
+- [Comparativa de Traducciones COBOL a Spring Boot](docs/INFORME8.md)
+- [Comparativa de Traducción BANCO-INGRESOS a Spring Boot, con y sin memory](docs/INFORME9.md)
+- [Proceso de unión de árboles con memory](docs/PROCESO_UNION_ARBOLES_MEMORY.md)

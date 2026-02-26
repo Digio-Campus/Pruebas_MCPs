@@ -1,0 +1,69 @@
+# Git Ignore - Banco Ingresos Spring Boot Project
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+.flattened-pom.xml
+
+# IDEs
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Classes
+/bin/
+/build/
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# H2 Database
+*.mv.db
+*.trace.db
+
+# Spring Boot
+HELP.md
+.mvn/wrapper/maven-wrapper.jar
+.gradletasknamecache
+
+# Temp files
+*.tmp
+*.bak
+*.swp
+
+# OS
+Thumbs.db
+.DS_Store
+
+# IDE specific files
+*.iml
+*.iws
+*.ipr
+.gradle/
+*.class
