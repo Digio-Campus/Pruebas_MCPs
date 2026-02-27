@@ -38,7 +38,6 @@ Este proyecto se desarrolló como parte de unas prácticas externas universitari
 
 ### Comparativas TicTacToe C++ (con y sin memoria)
 - [Comparativa: GPT-5.2 sin/con memory vs Sonnet con aprendizaje](docs/INFORME.md)
-- [Modelos y reestructuración de la memoria para incluir ratón](docs/MODELOS.md)
 - [Comparativa completa de los 7 proyectos TicTacToe con ncurses](docs/INFORME2.md)
 - [Árbol de Relaciones del Grafo de Conocimiento para TicTacToe](docs/INFORME3.md)
 - [Impacto del MCP Memory en Grok vs Raptor (memoria descriptiva y prescriptiva)](docs/INFORME4.md)
@@ -125,7 +124,10 @@ Grok ganó 6 capacidades nuevas con memoria prescriptiva (namespaces, enums tipa
 ### `translate/` — Traducciones COBOL → Spring Boot
 
 - `banco-ingresos.cbl`, `banco-consulta-saldo.cbl`, etc. — Programas COBOL originales
-- `spring-boot-banco/` — Traducción base
+
+### `translate/spring-boot`
+
+- `spring-boot-banco/` — Traducción base con Haiku
 - `spring-boot-banco-haiku_memory/` — Claude Haiku con memoria
 - `spring-boot-banco-sonnet_remembrances/` — Claude Sonnet con Remembrances
 - `spring-boot-banco-opus/` — Claude Opus 4.6 con memoria
