@@ -2,7 +2,7 @@
 
 ## 1. Contexto
 
-Ambos proyectos son traducciones del **mismo programa COBOL** (`BANCO-INGRESOS`) a una API REST con Spring Boot. La diferencia principal radica en la **sesión de generación** y la **profundidad de la traducción**:
+Ambos proyectos son traducciones del **mismo programa COBOL** (`BANCO-INGRESOS`) a una API REST con Spring Boot y con el mismo modelo de IA (claude haiku) pero `banco-ingresos-spring` es la versión que no usa la memoria y `spring-boot-banco-ingresos` el que si usa la memoria proporcionada por claude-opus 4.6 en las primeras pruebas. La diferencia principal radica en la **sesión de generación** y la **profundidad de la traducción**:
 
 | Aspecto | `banco-ingresos-spring` | `spring-boot-banco-ingresos` |
 |---|---|---|

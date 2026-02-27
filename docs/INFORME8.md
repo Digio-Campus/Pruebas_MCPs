@@ -1,10 +1,10 @@
-# INFORME 8 — Comparativa: `spring-boot-banco` vs `spring-boot-gpt5_2`
+# INFORME 8 — Comparativa: `spring-boot-banco-opus` vs `spring-boot-gpt5_2`
 
 ## 1. Contexto
 
-Ambos proyectos son traducciones de los mismos programas COBOL bancarios (BANCO-INGRESOS, BANCO-CONSULTA-SALDO, BANCO-TRANSFERENCIA, BANCO-EXTRACTO y HELLO-WORLD) a una API REST con Spring Boot. La diferencia principal radica en **quién realizó la traducción**:
+Ambos proyectos son traducciones de los mismos programas COBOL bancarios (BANCO-INGRESOS, BANCO-CONSULTA-SALDO, BANCO-TRANSFERENCIA, BANCO-EXTRACTO y HELLO-WORLD) a una API REST con Spring Boot. En este caso opus realizo la tarea sin memoria y genero recuerdos en la memoria, para que posteriormente el modelo gpt5.2 utilizase la información que ya existia en la memoria. La diferencia principal radica en **quién realizó la traducción**:
 
-| Aspecto | `spring-boot-banco` | `spring-boot-gpt5_2` |
+| Aspecto | `spring-boot-banco-opus` | `spring-boot-gpt5_2` |
 |---|---|---|
 | **Generado por** | GitHub Copilot (con Memory MCP) | GPT-5 (modelo directo) |
 | **Enfoque** | Traducción fiel al COBOL original | Traducción con modernización Java |
@@ -15,7 +15,7 @@ Ambos proyectos son traducciones de los mismos programas COBOL bancarios (BANCO-
 
 ## 2. Estadísticas generales
 
-| Métrica | `spring-boot-banco` | `spring-boot-gpt5_2` |
+| Métrica | `spring-boot-banco-opus` | `spring-boot-gpt5_2` |
 |---|---|---|
 | Archivos `.java` | 24 | 25 |
 | Líneas de código Java | 938 | 700 |
@@ -30,7 +30,7 @@ Ambos proyectos son traducciones de los mismos programas COBOL bancarios (BANCO-
 
 ## 3. Dependencias (`pom.xml`)
 
-| Dependencia | `spring-boot-banco` | `spring-boot-gpt5_2` |
+| Dependencia | `spring-boot-banco-opus` | `spring-boot-gpt5_2` |
 |---|---|---|
 | spring-boot-starter-web | ✅ | ✅ |
 | spring-boot-starter-data-jpa | ✅ | ✅ |
@@ -40,13 +40,13 @@ Ambos proyectos son traducciones de los mismos programas COBOL bancarios (BANCO-
 | **SpringDoc OpenAPI (Swagger)** | ❌ | ✅ (v2.3.0) |
 | spring-boot-starter-test | ✅ | ✅ |
 
-**Análisis:** `spring-boot-gpt5_2` añade Lombok para reducir boilerplate y SpringDoc para documentación automática de la API. `spring-boot-banco` opta por no incorporar dependencias adicionales más allá de lo estrictamente necesario.
+**Análisis:** `spring-boot-gpt5_2` añade Lombok para reducir boilerplate y SpringDoc para documentación automática de la API. `spring-boot-banco-opus` opta por no incorporar dependencias adicionales más allá de lo estrictamente necesario.
 
 ---
 
 ## 4. Arquitectura de servicios
 
-### 4.1. `spring-boot-banco` — 4 servicios separados
+### 4.1. `spring-boot-banco-opus` — 4 servicios separados
 
 ```
 IngresoService           → registrar ingresos (batch)
@@ -67,7 +67,7 @@ Centraliza toda la lógica en un único servicio. Simplifica la inyección de de
 
 ### Valoración
 
-| Criterio | `spring-boot-banco` | `spring-boot-gpt5_2` |
+| Criterio | `spring-boot-banco-opus` | `spring-boot-gpt5_2` |
 |---|---|---|
 | Principio de responsabilidad única (SRP) | ✅ Mejor separación | ⚠️ Clase con múltiples responsabilidades |
 | Simplicidad | ⚠️ Más archivos | ✅ Un solo punto de entrada |
@@ -80,7 +80,7 @@ Centraliza toda la lógica en un único servicio. Simplifica la inyección de de
 
 ### 5.1. `CuentaBancaria`
 
-| Aspecto | `spring-boot-banco` | `spring-boot-gpt5_2` |
+| Aspecto | `spring-boot-banco-opus` | `spring-boot-gpt5_2` |
 |---|---|---|
 | `@Column(nullable=false)` | No explícito | ✅ En todos los campos |
 | Constructor JPA | `public` (por defecto) | `protected` (buena práctica JPA) |
@@ -89,7 +89,7 @@ Centraliza toda la lógica en un único servicio. Simplifica la inyección de de
 
 ### 5.2. `Movimiento`
 
-| Aspecto | `spring-boot-banco` | `spring-boot-gpt5_2` |
+| Aspecto | `spring-boot-banco-opus` | `spring-boot-gpt5_2` |
 |---|---|---|
 | Campo `fecha` | `String` | `LocalDateTime` ✅ |
 | Campo `tipo` | `String` ("I"/"G") | `TipoMovimiento` enum (`I`, `G`) ✅ |
@@ -106,7 +106,7 @@ Centraliza toda la lógica en un único servicio. Simplifica la inyección de de
 
 ### Enfoque radicalmente diferente
 
-| Aspecto | `spring-boot-banco` | `spring-boot-gpt5_2` |
+| Aspecto | `spring-boot-banco-opus` | `spring-boot-gpt5_2` |
 |---|---|---|
 | Tipo de DTO | Clases Java (beans) | **Java Records** ✅ |
 | Boilerplate | Getters/setters manuales (~30 líneas/DTO) | 1 línea por record |
@@ -115,7 +115,7 @@ Centraliza toda la lógica en un único servicio. Simplifica la inyección de de
 
 ### Ejemplo comparativo — `SaldoResponse`
 
-**`spring-boot-banco`** (~50 líneas):
+**`spring-boot-banco-opus`** (~50 líneas):
 ```java
 public class SaldoResponse {
     private String numeroCuenta;
@@ -135,7 +135,7 @@ public record SaldoResponse(String numeroCuenta, String titular,
 
 ## 7. Controladores
 
-| Aspecto | `spring-boot-banco` | `spring-boot-gpt5_2` |
+| Aspecto | `spring-boot-banco-opus` | `spring-boot-gpt5_2` |
 |---|---|---|
 | Retorno | `ResponseEntity<T>` | DTO directo (sin wrapping) |
 | Servicio inyectado | 1 servicio por controlador | Todos usan `BancoService` |
@@ -146,17 +146,17 @@ public record SaldoResponse(String numeroCuenta, String titular,
 
 ### Diferencias funcionales relevantes
 
-1. **Ingreso batch vs individual:** `spring-boot-banco` acepta una lista de ingresos en una sola petición (más fiel al COBOL que procesa lotes). `spring-boot-gpt5_2` acepta un solo ingreso por petición (estilo REST más estándar).
+1. **Ingreso batch vs individual:** `spring-boot-banco-opus` acepta una lista de ingresos en una sola petición (más fiel al COBOL que procesa lotes). `spring-boot-gpt5_2` acepta un solo ingreso por petición (estilo REST más estándar).
 
-2. **Extracto:** `spring-boot-banco` recibe un `saldoInicial` para calcular el balance. `spring-boot-gpt5_2` limita el número de movimientos (`limit`) y calcula el saldo inicial restando del saldo actual.
+2. **Extracto:** `spring-boot-banco-opus` recibe un `saldoInicial` para calcular el balance. `spring-boot-gpt5_2` limita el número de movimientos (`limit`) y calcula el saldo inicial restando del saldo actual.
 
-3. **ResponseEntity:** `spring-boot-banco` envuelve todas las respuestas en `ResponseEntity`, siguiendo el patrón más común en APIs profesionales (permite control sobre headers y status). `spring-boot-gpt5_2` retorna directamente el DTO, lo cual es más conciso.
+3. **ResponseEntity:** `spring-boot-banco-opus` envuelve todas las respuestas en `ResponseEntity`, siguiendo el patrón más común en APIs profesionales (permite control sobre headers y status). `spring-boot-gpt5_2` retorna directamente el DTO, lo cual es más conciso.
 
 ---
 
 ## 8. Repositorios
 
-| Aspecto | `spring-boot-banco` | `spring-boot-gpt5_2` |
+| Aspecto | `spring-boot-banco-opus` | `spring-boot-gpt5_2` |
 |---|---|---|
 | Nombre | `CuentaRepository` | `CuentaBancariaRepository` |
 | Anotación `@Repository` | ✅ Explícita | ❌ (innecesaria con Spring Data) |
@@ -165,13 +165,13 @@ public record SaldoResponse(String numeroCuenta, String titular,
 | Ordenación | Ascendente (cronológico) | Descendente (más reciente primero) |
 | Límite de resultados | Sin límite | Top 50 |
 
-**Análisis:** `spring-boot-gpt5_2` realiza la consulta directamente por `numeroCuenta` (String), evitando cargar la entidad previamente. Además, implementa paginación implicit con `Top50`. `spring-boot-banco` requiere cargar la entidad `CuentaBancaria` primero para consultar sus movimientos.
+**Análisis:** `spring-boot-gpt5_2` realiza la consulta directamente por `numeroCuenta` (String), evitando cargar la entidad previamente. Además, implementa paginación implicit con `Top50`. `spring-boot-banco-opus` requiere cargar la entidad `CuentaBancaria` primero para consultar sus movimientos.
 
 ---
 
 ## 9. Manejo de excepciones
 
-| Aspecto | `spring-boot-banco` | `spring-boot-gpt5_2` |
+| Aspecto | `spring-boot-banco-opus` | `spring-boot-gpt5_2` |
 |---|---|---|
 | Handler global | `GlobalExceptionHandler` | `ApiExceptionHandler` |
 | Handlers separados | 3 (uno por excepción) | 2 (agrupados) + 1 validation |
@@ -181,7 +181,7 @@ public record SaldoResponse(String numeroCuenta, String titular,
 
 **Análisis:** `spring-boot-gpt5_2` tiene un manejo de excepciones más robusto:
 - Agrupa excepciones relacionadas en un solo handler.
-- Captura errores de validación de beans (`@Valid`), lo que `spring-boot-banco` no hace.
+- Captura errores de validación de beans (`@Valid`), lo que `spring-boot-banco-opus` no hace.
 - La excepción `SaldoInsuficienteException` es estructurada (3 parámetros) vs un simple mensaje de texto.
 
 ---
@@ -190,7 +190,7 @@ public record SaldoResponse(String numeroCuenta, String titular,
 
 ### 10.1. Formato de configuración
 
-**`spring-boot-banco`** — `application.properties`:
+**`spring-boot-banco-opus`** — `application.properties`:
 ```properties
 server.port=8085
 spring.jpa.hibernate.ddl-auto=create-drop
@@ -208,7 +208,7 @@ spring:
     open-in-view: false
 ```
 
-| Aspecto | `spring-boot-banco` | `spring-boot-gpt5_2` |
+| Aspecto | `spring-boot-banco-opus` | `spring-boot-gpt5_2` |
 |---|---|---|
 | ddl-auto | `create-drop` | `update` |
 | `open-in-view` | No configurado (true por defecto) | `false` ✅ (evita lazy-loading accidental) |
@@ -216,7 +216,7 @@ spring:
 
 ### 10.2. Datos iniciales (seed data)
 
-| Aspecto | `spring-boot-banco` | `spring-boot-gpt5_2` |
+| Aspecto | `spring-boot-banco-opus` | `spring-boot-gpt5_2` |
 |---|---|---|
 | Mecanismo | `data.sql` | `DataInitializer.java` (CommandLineRunner) |
 | Idempotente | ❌ Siempre ejecuta | ✅ Verifica `count > 0` |
@@ -230,20 +230,20 @@ spring:
 
 ## 11. Comisión en transferencias
 
-| Aspecto | `spring-boot-banco` | `spring-boot-gpt5_2` |
+| Aspecto | `spring-boot-banco-opus` | `spring-boot-gpt5_2` |
 |---|---|---|
 | Configurable | ✅ `@Value("${...}")` | ❌ Hardcoded |
 | Umbral | 3000 (inyectado) | 3000 (literal) |
 | Porcentaje | 0.005 (inyectado) | 0.005 (literal) |
 | Redondeo | No especificado | `setScale(2, HALF_UP)` ✅ |
 
-**Análisis:** `spring-boot-banco` permite configurar la comisión externamente sin recompilar (12-factor app). `spring-boot-gpt5_2` aplica redondeo correcto pero requiere cambio de código para modificar los valores.
+**Análisis:** `spring-boot-banco-opus` permite configurar la comisión externamente sin recompilar (12-factor app). `spring-boot-gpt5_2` aplica redondeo correcto pero requiere cambio de código para modificar los valores.
 
 ---
 
 ## 12. Interfaz de usuario
 
-### `spring-boot-banco` — Panel HTML interactivo
+### `spring-boot-banco-opus` — Panel HTML interactivo
 
 Incluye un archivo `index.html` de 157 líneas con:
 - 5 tarjetas interactivas (una por endpoint)
@@ -261,7 +261,7 @@ Aprovecha SpringDoc OpenAPI para generar documentación interactiva automática.
 
 ### Valoración
 
-| Criterio | `spring-boot-banco` | `spring-boot-gpt5_2` |
+| Criterio | `spring-boot-banco-opus` | `spring-boot-gpt5_2` |
 |---|---|---|
 | Esfuerzo de creación | Alto (HTML/CSS/JS manual) | Nulo (generado) |
 | Personalización | ✅ Total | ⚠️ Limitada |
@@ -273,7 +273,7 @@ Aprovecha SpringDoc OpenAPI para generar documentación interactiva automática.
 
 ## 13. Testing
 
-| Aspecto | `spring-boot-banco` | `spring-boot-gpt5_2` |
+| Aspecto | `spring-boot-banco-opus` | `spring-boot-gpt5_2` |
 |---|---|---|
 | Clase de test | No existe | `SpringBootGpt52ApplicationTests` |
 | Tests de contexto | ❌ | ✅ `contextLoads()` |
@@ -286,7 +286,7 @@ Ninguno de los dos proyectos tiene tests de lógica de negocio. `spring-boot-gpt
 
 ## 14. Tabla resumen de buenas prácticas
 
-| Buena práctica | `spring-boot-banco` | `spring-boot-gpt5_2` |
+| Buena práctica | `spring-boot-banco-opus` | `spring-boot-gpt5_2` |
 |---|---|---|
 | Constructor `protected` en entidades | ❌ | ✅ |
 | `@Transient` en campos calculados | ❌ | ✅ |
@@ -311,7 +311,7 @@ Ninguno de los dos proyectos tiene tests de lógica de negocio. `spring-boot-gpt
 
 ## 15. Conclusiones
 
-### `spring-boot-banco` (Copilot + Memory MCP)
+### `spring-boot-banco-opus` (Copilot + Memory MCP)
 
 **Fortalezas:**
 - Traducción más fiel a la estructura original COBOL (1 programa → 1 servicio).
@@ -350,14 +350,14 @@ Ninguno de los dos proyectos tiene tests de lógica de negocio. `spring-boot-gpt
 | Criterio | Ventaja |
 |---|---|
 | Calidad técnica del código | `spring-boot-gpt5_2` |
-| Fidelidad a la traducción COBOL | `spring-boot-banco` |
-| Arquitectura de servicios | `spring-boot-banco` |
+| Fidelidad a la traducción COBOL | `spring-boot-banco-opus` |
+| Arquitectura de servicios | `spring-boot-banco-opus` |
 | Prácticas JPA modernas | `spring-boot-gpt5_2` |
 | Concisión y mantenibilidad | `spring-boot-gpt5_2` |
 | Experiencia de usuario | Empate (HTML vs Swagger) |
-| Configurabilidad | `spring-boot-banco` |
+| Configurabilidad | `spring-boot-banco-opus` |
 
-Un proyecto **ideal** combinaría la **arquitectura de servicios separados** de `spring-boot-banco` con las **prácticas modernas de Java** de `spring-boot-gpt5_2`: records, enums, `LocalDateTime`, `@Transient`, `FetchType.LAZY`, constructor `protected`, Swagger, y seed data idempotente, manteniendo la comisión configurable y la fidelidad al flujo original COBOL.
+Un proyecto **ideal** combinaría la **arquitectura de servicios separados** de `spring-boot-banco-opus` con las **prácticas modernas de Java** de `spring-boot-gpt5_2`: records, enums, `LocalDateTime`, `@Transient`, `FetchType.LAZY`, constructor `protected`, Swagger, y seed data idempotente, manteniendo la comisión configurable y la fidelidad al flujo original COBOL.
 
 ---
 
